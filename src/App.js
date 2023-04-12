@@ -20,8 +20,8 @@ function App() {
                     </div>
                 </nav>
                 <div className="container mx-auto px-6 pt-16">
-                    <div className="flex space-x-10">
-                        <div>
+                    <div className="flex flex-col md:flex-row space-x-10">
+                        <div className="md:w-2/3">
                             <h1 className="text-4xl md:text-6xl font-bold leading-3 text-gray-900 leading-tight"
                                 style={{ lineHeight: 1 }}>De
                                 uma mão
@@ -35,7 +35,7 @@ function App() {
                                 mas poucos a dominam.
                                 Participe do projeto Mamão e faça a diferença na comunicação inclusiva!
                             </p>
-                            <section className="py-16 md:w-5/6">
+                            <section className="pt-16 md:py-16 md:w-5/6">
                                 <h2 className="text-2xl md:text-4xl font-bold text-gray-800">Colabore na criação do primeiro
                                     tradutor
                                     Libras-Português</h2>
@@ -50,18 +50,18 @@ function App() {
                                     acessível e inclusiva. Faça parte dessa transformação na linguagem!</p>
                             </section>
                         </div>
-                        <div className="hidden md:block"><img src={imageSigns} style={{ height: "500px" }} alt="Signs Imgs" /></div>
+                        <div><img src={imageSigns} style={{ height: "450px" }} alt="Signs Imgs" /></div>
                     </div>
                 </div>
             </header>
             <main className="container flex flex-col mx-auto px-6">
-                <div className="    flex justify-center md:w-1/2">
+                <div className="flex justify-center md:w-1/2">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-xl font-medium">Nos de uma
                         mão</button>
                 </div>
-                <section className="py-16 md:pl-6 flex justify-end">
-                    <div className="md:w-1/2">
-                        <div className="hidden md:block"><img src={imageModel} style={{ height: "400px" }} alt="Model Imgs" /></div>
+                <section className="flex flex-col md:flex-row py-16 md:pl-6 flex justify-end">
+                    <div className="md:w-1/2 hidden md:block">
+                        <div className="flex justify-center"><img src={imageModel} style={{ height: "325px" }} alt="Model Imgs" /></div>
                     </div>
                     <div className="md:w-1/2">
                         <h2 className="text-xl md:text-2xl font-bold text-gray-800">Entenda como funciona</h2>
@@ -102,7 +102,7 @@ function App() {
                         </p>
                     </div>
                 </section>
-                <section className="py-8 md:pr-6 flex">
+                <section className="py-8 md:pr-6 flex flex-col space-y-6 md:space-y-0 md:flex-row">
                     <div className="md:w-1/2">
                         <h2 className="text-xl md:text-2xl font-bold text-gray-800">E os meus dados?</h2>
                         <p className="text-lg md:text-xl text-gray-700 mt-2">Fique tranquilo! Todos os dados coletados são
@@ -115,7 +115,7 @@ function App() {
                         </p>
                     </div>
                     <div className="md:w-1/2">
-                        <div className="hidden md:block flex justify-center"><img src={imageProtection} style={{ height: "300px" }} alt="Protection Imgs" /></div>
+                        <div className="flex justify-center"><img src={imageProtection} style={{ height: "325px" }} alt="Protection Imgs" /></div>
                     </div>
                 </section>
                 <div className="flex justify-center mt-16">
