@@ -50,7 +50,7 @@ function App() {
                                     acessível e inclusiva. Faça parte dessa transformação na linguagem!</p>
                             </section>
                         </div>
-                        <div><img src={imageSigns} style={{ height: "500px" }} alt="Signs Imgs" /></div>
+                        <div className="hidden md:block"><img src={imageSigns} style={{ height: "500px" }} alt="Signs Imgs" /></div>
                     </div>
                 </div>
             </header>
@@ -61,7 +61,7 @@ function App() {
                 </div>
                 <section className="py-16 pl-6 flex justify-end">
                     <div className="md:w-1/2">
-                        <div><img src={imageModel} style={{ height: "400px" }} alt="Model Imgs" /></div>
+                        <div className="hidden md:block"><img src={imageModel} style={{ height: "400px" }} alt="Model Imgs" /></div>
                     </div>
                     <div className="md:w-1/2">
                         <h2 className="text-xl md:text-2xl font-bold text-gray-800">Entenda como funciona</h2>
@@ -115,7 +115,7 @@ function App() {
                         </p>
                     </div>
                     <div className="md:w-1/2">
-                        <div className="flex justify-center"><img src={imageProtection} style={{ height: "300px" }} alt="Protection Imgs" /></div>
+                        <div className="hidden md:block flex justify-center"><img src={imageProtection} style={{ height: "300px" }} alt="Protection Imgs" /></div>
                     </div>
                 </section>
                 <div className="flex justify-center mt-16">
