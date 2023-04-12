@@ -59,7 +59,7 @@ function App() {
                     <button className="bg-blue-500 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-xl font-medium">Nos de uma
                         mão</button>
                 </div>
-                <section className="py-16 pl-6 flex justify-end">
+                <section className="py-16 md:pl-6 flex justify-end">
                     <div className="md:w-1/2">
                         <div className="hidden md:block"><img src={imageModel} style={{ height: "400px" }} alt="Model Imgs" /></div>
                     </div>
