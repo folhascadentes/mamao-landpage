@@ -21,12 +21,6 @@ CLOUDFRONT_DISTRIBUTION="minha-distribuicao"
 # Sincroniza os arquivos do build com o bucket S3
 aws s3 sync $BUILD_DIR s3://$BUCKET_NAME --delete --region $REGION
 
-# Cria uma nova distribuição CloudFront
-# DISTRIBUTION_ID=$(aws cloudfront create-distribution --distribution-config file://$CLOUDFRONT_CONFIG --query 'Distribution.Id' --output text)
-
-# Espera até que a distribuição esteja totalmente criada
-# aws cloudfront wait distribution-deployed --id $DISTRIBUTION_ID
-
 # Atualiza a distribuição CloudFront
 # aws cloudfront update-distribution --id $CLOUDFRONT_DISTRIBUTION --distribution-config file://$CLOUDFRONT_CONFIG
 
