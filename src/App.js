@@ -15,7 +15,7 @@ function App() {
                             <p className="text-4xl" style={{ color: "#f09666" }}>Mamão</p>
                         </a>
                         <div className="flex">
-                            <button className="bg-blue-500 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-xl font-medium">Ajudar</button>
+                            <button className="bg-blue-500 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium">Ajudar</button>
                         </div>
                     </div>
                 </nav>
@@ -56,7 +56,7 @@ function App() {
             </header>
             <main className="container flex flex-col mx-auto px-6">
                 <div className="flex justify-center md:w-1/2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-xl font-medium">Nos de uma
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium">Nos dê uma
                         mão</button>
                 </div>
                 <section className="flex flex-col md:flex-row py-16 md:pl-6 flex justify-end">
@@ -119,7 +119,7 @@ function App() {
                     </div>
                 </section>
                 <div className="flex justify-center mt-16">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-xl font-medium">Dar uma
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium">Dar uma
                         mão</button>
                 </div>
             </main>
