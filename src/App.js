@@ -3,17 +3,30 @@ import logo from './assets/papaya.png'
 import imageModel from './assets/model.png'
 import imageSigns from './assets/signs.svg'
 import imageProtection from './assets/protection.png'
-import React from 'react';
+import React, { useState } from 'react';
 
 function App() {
+    const [fontSize, setFontSize] = useState(100);
+
+    const handleIncreaseFontSize = () => {
+        setFontSize(fontSize + 10);
+    };
+
+    const handleDecreaseFontSize = () => {
+        setFontSize(fontSize - 10);
+    };
+
     return (
         <div className="bg-gray-50 pb-20">
+            <style>{`html {font-size: ${fontSize}%; }`}</style>
             <header>
                 <nav className="container mx-auto px-6 py-8">
                     <div className="flex justify-between items-center">
-                        <a className="flex items-center space-x-4" href="#"><img src={logo} alt="Papaya Logo" className="h-20" />
+                        <a className="flex items-center space-x-4" href="#"><img src={logo} alt="Papaya Logo" style={{ height: '80px' }} />
                             <p className="text-4xl" style={{ color: "#f09666" }}>Mamão</p>
                         </a>
+                        <button onClick={handleIncreaseFontSize}>Increase Font Size</button>
+                        <button onClick={handleDecreaseFontSize}>Decrease Font Size</button>
                         <div className="flex">
                             <button className="bg-blue-500 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium">Ajudar</button>
                         </div>
