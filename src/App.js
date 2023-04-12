@@ -22,9 +22,9 @@ function App() {
             <header>
                 <nav className="container mx-auto px-6 py-8">
                     <div className="flex justify-between items-center">
-                        <a className="flex items-center space-x-4" href="#"><img src={logo} alt="Papaya Logo" style={{ height: '80px' }} />
+                        <div className="flex items-center space-x-4"><img src={logo} alt="Papaya Logo" style={{ height: '80px' }} />
                             <p className="text-4xl" style={{ color: "#f09666" }}>Mamão</p>
-                        </a>
+                        </div>
                         <div className="flex space-x-6">
                             <button title="Ação de aumentar tamanho do texto" aria-describedby="Ação de aumentar tamanho do texto" className="hover:bg-gray-200 rounded-xl px-4 font-bold" onClick={handleIncreaseFontSize} style={{ fontSize: '24px' }}>A+</button>
                             <button title="Ação de aumentar diminuir do texto" aria-describedby="Ação de aumentar diminuir do texto" className="hover:bg-gray-200 rounded-xl px-4 font-bold" onClick={handleDecreaseFontSize} style={{ fontSize: '24px' }}>A-</button>
