@@ -4,12 +4,27 @@ import imageModel from "./assets/model.png";
 import imageSigns from "./assets/signs.svg";
 import imageProtection from "./assets/protection.png";
 import React, { useState } from "react";
+import { bionicReading } from "bionic-reading";
+import { messages } from "./i18n.js";
 
 function App() {
   const [fontSize, setFontSize] = useState(100);
+  const [textColor, setTextColor] = useState("rgb(31 41 55)");
+  const [backgroundColor, setBackgroundColor] = useState("#f5f5f5");
+  const [language, setLanguage] = useState("pt");
 
   const handleGoToApp = () => {
     window.location.href = "https://app.mamao.dev.br";
+  };
+
+  const handleHightConstast = () => {
+    if (backgroundColor === "#f5f5f5") {
+      setBackgroundColor("#000000");
+      setTextColor("#ffffff");
+    } else {
+      setBackgroundColor("#f5f5f5");
+      setTextColor("rgb(31 41 55)");
+    }
   };
 
   const handleIncreaseFontSize = () => {
@@ -21,8 +36,8 @@ function App() {
   };
 
   return (
-    <div className="bg-neutral-100 pb-20">
-      <style>{`html {font-size: ${fontSize}%; }`}</style>
+    <div className="pb-20">
+      <style>{`html {font-size: ${fontSize}%; color: ${textColor}; background-color: ${backgroundColor}; }`}</style>
       <header>
         <nav className="container mx-auto px-6 py-8">
           <div className="flex justify-between items-center">
@@ -31,6 +46,15 @@ function App() {
               <p className="text-4xl font-light text-orange-600">MAMÃO</p>
             </div>
             <div className="flex space-x-6">
+              <button
+                title="Autocontraste"
+                aria-describedby="Autocontraste"
+                className="hover:bg-gray-200 rounded-xl px-4 font-bold hidden md:block"
+                onClick={handleHightConstast}
+                style={{ fontSize: "24px" }}
+              >
+                HC
+              </button>
               <button
                 title="Ação de aumentar tamanho do texto"
                 aria-describedby="Ação de aumentar tamanho do texto"
@@ -53,7 +77,7 @@ function App() {
                 onClick={handleGoToApp}
                 className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium"
               >
-                Ajudar
+                {messages.ctaButton1[language]}
               </button>
             </div>
           </div>
@@ -62,30 +86,35 @@ function App() {
           <div className="flex flex-col md:flex-row space-x-10">
             <div className="md:w-2/3">
               <h1
-                className="text-4xl md:text-6xl font-medium leading-3 text-gray-900 leading-tight"
+                className="text-4xl md:text-6xl font-medium leading-3 leading-tight"
                 style={{ lineHeight: 1 }}
               >
-                <span className="text-orange-600 font-black">De uma mão</span>{" "}
-                para superar barreiras de comunicação
+                <span className="text-orange-600 font-black">
+                  {messages.slogan[language]}
+                </span>{" "}
+                {messages.mainHeading[language]}
               </h1>
-              <p className="text-xl md:text-2xl text-gray-700 mt-4 md:w-2/3">
-                {" "}
-                A Libras (Língua Brasileira de Sinais) é a segunda língua
-                oficial do Brasil, mas poucos a dominam. Participe do projeto
-                Mamão e faça a diferença na comunicação inclusiva!
-              </p>
+              <div
+                className="text-xl md:text-2xl mt-4 md:w-2/3"
+                dangerouslySetInnerHTML={{
+                  __html: bionicReading(messages.mainText[language]),
+                }}
+              ></div>
               <section className="pt-16 md:py-16 md:w-5/6">
-                <h2 className="text-2xl md:text-4xl font-medium text-gray-800">
-                  <span className="text-orange-600 font-black">Colabore</span>{" "}
-                  na criação do primeiro tradutor Libras-Português
+                <h2 className="text-2xl md:text-4xl font-medium">
+                  <span className="text-orange-600 font-black">
+                    {messages.collaborate[language]}
+                  </span>{" "}
+                  {messages.collaborateText[language]}
                 </h2>
-                <p className="text-lg md:text-xl text-gray-700 mt-2">
-                  Estamos trabalhando para desenvolver o primeiro tradutor de
-                  Libras para português com inteligência artificial avançada.
-                  Contamos com sua ajuda para criar uma base de dados completa
-                  dos sinais de Libras, tornando a comunicação mais acessível e
-                  inclusiva. Faça parte dessa transformação na linguagem!
-                </p>
+                <div
+                  className="text-lg md:text-xl mt-2"
+                  dangerouslySetInnerHTML={{
+                    __html: bionicReading(
+                      messages.collaborateDescription[language]
+                    ),
+                  }}
+                ></div>
               </section>
             </div>
             <div>
@@ -110,28 +139,25 @@ function App() {
             </div>
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-xl md:text-2xl font-medium text-gray-800">
-              Entenda como funciona
+            <h2 className="text-xl md:text-3xl font-medium">
+              {messages.howItWorks[language]}
             </h2>
-            <p className="text-lg md:text-xl text-gray-700 mt-2">
-              Para criar nosso tradutor Libras-Português, precisamos unir a
-              construção de uma base de dados e o uso de inteligência
-              artificial. A base de dados funciona como um repositório amplo de
-              sinais de Libras, possibilitando o aprendizado e compreensão da
-              linguagem pela inteligência artificial. Com essa combinação, nosso
-              tradutor identificará e traduzirá sinais de Libras de forma
-              precisa e ágil.
-            </p>
-            <p className="text-lg md:text-xl text-gray-700 mt-2">
-              A inteligência artificial emprega algoritmos de aprendizado de
-              máquina para examinar a base de dados, identificar padrões e
-              estabelecer relações entre sinais de Libras e o português. Quanto
-              mais informações forem coletadas e disponibilizadas, mais
-              eficientes e eficazes serão as traduções. Sua participação é
-              fundamental para aprimorar o entendimento da inteligência
-              artificial e garantir uma comunicação acessível e inclusiva para a
-              comunidade surda.
-            </p>
+            <div
+              className="text-lg md:text-xl mt-2"
+              dangerouslySetInnerHTML={{
+                __html: bionicReading(
+                  messages.howItWorksDescription1[language]
+                ),
+              }}
+            ></div>
+            <div
+              className="text-lg md:text-xl mt-2"
+              dangerouslySetInnerHTML={{
+                __html: bionicReading(
+                  messages.howItWorksDescription2[language]
+                ),
+              }}
+            ></div>
           </div>
         </section>
         <div className="flex justify-center md:w-1/2">
@@ -139,41 +165,36 @@ function App() {
             onClick={handleGoToApp}
             className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium"
           >
-            Nos dê uma mão
+            {messages.ctaButton2[language]}
           </button>
         </div>
         <section className="py-16 md:pr-6 flex">
           <div className="md:w-1/2">
-            <h2 className="text-2xl md:text-4xl font-medium text-gray-800">
-              Como você pode{" "}
-              <span className="text-orange-600 font-black">contribuir</span>
+            <h2 className="text-2xl md:text-4xl font-medium">
+              {messages.contribute[language]}{" "}
+              <span className="text-orange-600 font-black">
+                {messages.contributeHighlight[language]}
+              </span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-700 mt-2">
-              Para apoiar essa causa, basta se cadastrar em nossa plataforma e
-              seguir as instruções simples e rápidas. Em apenas 5 minutos ou
-              menos, você pode fazer a diferença e ajudar a tornar a comunicação
-              entre pessoas surdas e ouvintes mais inclusiva e acessível. Vamos
-              juntos construir um mundo melhor e mais conectado!
-            </p>
+            <div
+              className="text-lg md:text-xl mt-2"
+              dangerouslySetInnerHTML={{
+                __html: bionicReading(messages.contributeDescription[language]),
+              }}
+            ></div>
           </div>
         </section>
         <section className="pb-16 md:pr-6 flex flex-col space-y-6 md:space-y-0 md:flex-row">
           <div className="md:w-1/2">
-            <h2 className="text-xl md:text-2xl font-medium text-gray-800">
-              E os meus dados?
+            <h2 className="text-xl md:text-3xl font-medium">
+              {messages.dataPrivacy[language]}
             </h2>
-            <p className="text-lg md:text-xl text-gray-700 mt-2">
-              Fique tranquilo! Todos os dados coletados são propriedade coletiva
-              e poderão ser utilizados pela comunidade científica e outras
-              organizações sem fins comerciais. A base de dados é de código
-              aberto, seguindo as normas da Lei Geral de Proteção de Dados
-              (LGPD), e garantimos que você pode solicitar a remoção da sua
-              imagem da base de dados a qualquer momento. Em caso de objetivos
-              comerciais, os lucros obtidos com o licenciamento serão
-              direcionados ao apoio de projetos voltados à maior acessibilidade
-              para a população, incluindo a comunidade de intérpretes de libras.
-              Nosso compromisso é com a inclusão e a proteção dos seus dados.
-            </p>
+            <div
+              className="text-lg md:text-xl mt-2"
+              dangerouslySetInnerHTML={{
+                __html: bionicReading(messages.dataPrivacyDescription[language]),
+              }}
+            ></div>
           </div>
           <div className="md:w-1/2">
             <div className="flex justify-center">
@@ -190,7 +211,7 @@ function App() {
             onClick={handleGoToApp}
             className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium"
           >
-            Dar uma mão
+            {messages.ctaButton3[language]}
           </button>
         </div>
       </main>
