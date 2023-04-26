@@ -16,7 +16,9 @@ function App() {
     setFontSize(fontSize + 10);
   };
 
-  const handleDecreaseFontSize = () => {};
+  const handleDecreaseFontSize = () => {
+    setFontSize(fontSize - 10);
+  };
 
   return (
     <div className="bg-neutral-100 pb-20">
