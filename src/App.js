@@ -26,13 +26,13 @@ function App() {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
               <img src={logo} alt="Papaya Logo" style={{ height: "80px" }} />
-              <p className="text-4xl text-orange-600">MAMÃO</p>
+              <p className="text-4xl font-light text-orange-600">MAMÃO</p>
             </div>
             <div className="flex space-x-6">
               <button
                 title="Ação de aumentar tamanho do texto"
                 aria-describedby="Ação de aumentar tamanho do texto"
-                className="hover:bg-gray-200 rounded-xl px-4 font-bold"
+                className="hover:bg-gray-200 rounded-xl px-4 font-bold hidden md:block"
                 onClick={handleIncreaseFontSize}
                 style={{ fontSize: "24px" }}
               >
@@ -41,7 +41,7 @@ function App() {
               <button
                 title="Ação de aumentar diminuir do texto"
                 aria-describedby="Ação de aumentar diminuir do texto"
-                className="hover:bg-gray-200 rounded-xl px-4 font-bold"
+                className="hover:bg-gray-200 rounded-xl px-4 font-bold hidden md:block"
                 onClick={handleDecreaseFontSize}
                 style={{ fontSize: "24px" }}
               >
@@ -60,11 +60,11 @@ function App() {
           <div className="flex flex-col md:flex-row space-x-10">
             <div className="md:w-2/3">
               <h1
-                className="text-4xl md:text-6xl font-bold leading-3 text-gray-900 leading-tight"
+                className="text-4xl md:text-6xl font-medium leading-3 text-gray-900 leading-tight"
                 style={{ lineHeight: 1 }}
               >
-                <span className="text-orange-600">De uma mão</span> para superar
-                barreiras de comunicação
+                <span className="text-orange-600 font-black">De uma mão</span>{" "}
+                para superar barreiras de comunicação
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 mt-4 md:w-2/3">
                 {" "}
@@ -73,9 +73,9 @@ function App() {
                 Mamão e faça a diferença na comunicação inclusiva!
               </p>
               <section className="pt-16 md:py-16 md:w-5/6">
-                <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
-                  <span className="text-orange-600">Colabore</span> na criação
-                  do primeiro tradutor Libras-Português
+                <h2 className="text-2xl md:text-4xl font-medium text-gray-800">
+                  <span className="text-orange-600 font-black">Colabore</span>{" "}
+                  na criação do primeiro tradutor Libras-Português
                 </h2>
                 <p className="text-lg md:text-xl text-gray-700 mt-2">
                   Estamos trabalhando para desenvolver o primeiro tradutor de
@@ -108,7 +108,7 @@ function App() {
             </div>
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800">
+            <h2 className="text-xl md:text-2xl font-medium text-gray-800">
               Entenda como funciona
             </h2>
             <p className="text-lg md:text-xl text-gray-700 mt-2">
@@ -142,8 +142,9 @@ function App() {
         </div>
         <section className="py-16 md:pr-6 flex">
           <div className="md:w-1/2">
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
-              Como você pode <span className="text-orange-600">contribuir</span>
+            <h2 className="text-2xl md:text-4xl font-medium text-gray-800">
+              Como você pode{" "}
+              <span className="text-orange-600 font-black">contribuir</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-700 mt-2">
               Para apoiar essa causa, basta se cadastrar em nossa plataforma e
@@ -156,7 +157,7 @@ function App() {
         </section>
         <section className="pb-16 md:pr-6 flex flex-col space-y-6 md:space-y-0 md:flex-row">
           <div className="md:w-1/2">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800">
+            <h2 className="text-xl md:text-2xl font-medium text-gray-800">
               E os meus dados?
             </h2>
             <p className="text-lg md:text-xl text-gray-700 mt-2">
