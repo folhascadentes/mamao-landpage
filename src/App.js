@@ -6,11 +6,13 @@ import imageProtection from "./assets/protection.png";
 import React, { useState } from "react";
 import { bionicReading } from "bionic-reading";
 import { messages } from "./i18n.js";
+import { MdContrast } from "react-icons/md";
 
 function App() {
   const [fontSize, setFontSize] = useState(100);
   const [textColor, setTextColor] = useState("rgb(31 41 55)");
   const [backgroundColor, setBackgroundColor] = useState("#f5f5f5");
+  const [buttonHoverColorWeight, setButtonHoverColorWeight] = useState("200");
   const [language, setLanguage] = useState("pt");
 
   const handleGoToApp = () => {
@@ -21,9 +23,11 @@ function App() {
     if (backgroundColor === "#f5f5f5") {
       setBackgroundColor("#000000");
       setTextColor("#ffffff");
+      setButtonHoverColorWeight("800");
     } else {
       setBackgroundColor("#f5f5f5");
       setTextColor("rgb(31 41 55)");
+      setButtonHoverColorWeight("200");
     }
   };
 
@@ -40,25 +44,31 @@ function App() {
       <style>{`html {font-size: ${fontSize}%; color: ${textColor}; background-color: ${backgroundColor}; }`}</style>
       <header>
         <nav className="container mx-auto px-6 py-8">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-wrap space-y-6 justify-between items-center">
             <div className="flex items-center space-x-4">
               <img src={logo} alt="Papaya Logo" style={{ height: "80px" }} />
               <p className="text-4xl font-light text-orange-600">MAMÃO</p>
             </div>
-            <div className="flex space-x-6">
+            <div className="flex space-x-4">
+              <button
+                onClick={handleGoToApp}
+                className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium"
+              >
+                {messages.ctaButton1[language]}
+              </button>
               <button
                 title="Autocontraste"
                 aria-describedby="Autocontraste"
-                className="hover:bg-gray-200 rounded-xl px-4 font-bold hidden md:block"
+                className={`hover:bg-gray-${buttonHoverColorWeight} rounded-xl px-4`}
                 onClick={handleHightConstast}
                 style={{ fontSize: "24px" }}
               >
-                HC
+                <MdContrast size={32} />
               </button>
               <button
                 title="Ação de aumentar tamanho do texto"
                 aria-describedby="Ação de aumentar tamanho do texto"
-                className="hover:bg-gray-200 rounded-xl px-4 font-bold hidden md:block"
+                className={`hover:bg-gray-${buttonHoverColorWeight} rounded-xl px-4 font-bold`}
                 onClick={handleIncreaseFontSize}
                 style={{ fontSize: "24px" }}
               >
@@ -67,17 +77,11 @@ function App() {
               <button
                 title="Ação de aumentar diminuir do texto"
                 aria-describedby="Ação de aumentar diminuir do texto"
-                className="hover:bg-gray-200 rounded-xl px-4 font-bold hidden md:block"
+                className={`hover:bg-gray-${buttonHoverColorWeight} rounded-xl px-4 font-bold`}
                 onClick={handleDecreaseFontSize}
                 style={{ fontSize: "24px" }}
               >
                 A-
-              </button>
-              <button
-                onClick={handleGoToApp}
-                className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium"
-              >
-                {messages.ctaButton1[language]}
               </button>
             </div>
           </div>
@@ -192,7 +196,9 @@ function App() {
             <div
               className="text-lg md:text-xl mt-2"
               dangerouslySetInnerHTML={{
-                __html: bionicReading(messages.dataPrivacyDescription[language]),
+                __html: bionicReading(
+                  messages.dataPrivacyDescription[language]
+                ),
               }}
             ></div>
           </div>
