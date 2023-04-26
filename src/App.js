@@ -8,6 +8,10 @@ import React, { useState } from "react";
 function App() {
   const [fontSize, setFontSize] = useState(100);
 
+  const handleGoToApp = () => {
+    window.location.href = "https://app.mamao.dev.br";
+  };
+
   const handleIncreaseFontSize = () => {
     setFontSize(fontSize + 10);
   };
@@ -43,7 +47,10 @@ function App() {
               >
                 A-
               </button>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium">
+              <button
+                onClick={handleGoToApp}
+                className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium"
+              >
                 Ajudar
               </button>
             </div>
@@ -126,7 +133,10 @@ function App() {
           </div>
         </section>
         <div className="flex justify-center md:w-1/2">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium">
+          <button
+            onClick={handleGoToApp}
+            className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium"
+          >
             Nos dê uma mão
           </button>
         </div>
@@ -173,7 +183,10 @@ function App() {
           </div>
         </section>
         <div className="flex justify-center">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium">
+          <button
+            onClick={handleGoToApp}
+            className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium"
+          >
             Dar uma mão
           </button>
         </div>
