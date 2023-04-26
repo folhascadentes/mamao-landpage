@@ -16,13 +16,13 @@ BUILD_DIR="build"
 CLOUDFRONT_CONFIG="cloudfront-config.json"
 
 # Nome da distribuição CloudFront
-CLOUDFRONT_DISTRIBUTION="minha-distribuicao"
+CLOUDFRONT_DISTRIBUTION="EE7HOT45Y65FF"
 
 # Sincroniza os arquivos do build com o bucket S3
 aws s3 sync $BUILD_DIR s3://$BUCKET_NAME --delete --region $REGION
 
 # Atualiza a distribuição CloudFront
-# aws cloudfront update-distribution --id $CLOUDFRONT_DISTRIBUTION --distribution-config file://$CLOUDFRONT_CONFIG
+aws cloudfront update-distribution --id $CLOUDFRONT_DISTRIBUTION --distribution-config file://$CLOUDFRONT_CONFIG
 
 # Invalida o cache da distribuição CloudFront
-# aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths "/*"
+aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths "/*"
