@@ -54,10 +54,11 @@ function App() {
                 onClick={handleGoToApp}
                 className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium"
               >
-                {messages.ctaButton1[language]}
+                {messages.ctaButton1[language]}{" "}
+                <span className="text-base hidden md:inline">[A]</span>
               </button>
               <button
-                title="Autocontraste"
+                title="Autocontraste [Ctrl+C]"
                 aria-describedby="Autocontraste"
                 className={`hover:bg-gray-${buttonHoverColorWeight} rounded-xl px-4`}
                 onClick={handleHightConstast}
@@ -66,7 +67,7 @@ function App() {
                 <MdContrast size={32} />
               </button>
               <button
-                title="Ação de aumentar tamanho do texto"
+                title="Ação de aumentar tamanho do texto [Ctrl+]"
                 aria-describedby="Ação de aumentar tamanho do texto"
                 className={`hover:bg-gray-${buttonHoverColorWeight} rounded-xl px-4 font-bold`}
                 onClick={handleIncreaseFontSize}
@@ -75,7 +76,7 @@ function App() {
                 A+
               </button>
               <button
-                title="Ação de aumentar diminuir do texto"
+                title="Ação de aumentar diminuir do texto [Ctrl-]"
                 aria-describedby="Ação de aumentar diminuir do texto"
                 className={`hover:bg-gray-${buttonHoverColorWeight} rounded-xl px-4 font-bold`}
                 onClick={handleDecreaseFontSize}
@@ -90,13 +91,14 @@ function App() {
           <div className="flex flex-col md:flex-row space-x-10">
             <div className="md:w-2/3">
               <h1
-                className="text-4xl md:text-6xl font-medium leading-3 leading-tight"
+                className="text-5xl md:text-7xl xl:text-8xl font-medium leading-3 leading-tight"
                 style={{ lineHeight: 1 }}
               >
                 <span className="text-orange-600 font-black">
                   {messages.slogan[language]}
                 </span>{" "}
-                {messages.mainHeading[language]}
+                {messages.mainHeading[language]}{" "}
+                <span className="text-base hidden md:inline">[1]</span>
               </h1>
               <div
                 className="text-xl md:text-2xl mt-4 md:w-2/3"
@@ -105,11 +107,12 @@ function App() {
                 }}
               ></div>
               <section className="pt-16 md:py-16 md:w-5/6">
-                <h2 className="text-2xl md:text-4xl font-medium">
+                <h2 className="text-3xl md:text-4xl font-medium">
                   <span className="text-orange-600 font-black">
                     {messages.collaborate[language]}
                   </span>{" "}
-                  {messages.collaborateText[language]}
+                  {messages.collaborateText[language]}{" "}
+                  <span className="text-base hidden md:inline">[2]</span>
                 </h2>
                 <div
                   className="text-lg md:text-xl mt-2"
@@ -143,8 +146,9 @@ function App() {
             </div>
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-xl md:text-3xl font-medium">
-              {messages.howItWorks[language]}
+            <h2 className="text-2xl md:text-3xl font-medium">
+              {messages.howItWorks[language]}{" "}
+              <span className="text-base hidden md:inline">[2]</span>
             </h2>
             <div
               className="text-lg md:text-xl mt-2"
@@ -169,16 +173,18 @@ function App() {
             onClick={handleGoToApp}
             className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium"
           >
-            {messages.ctaButton2[language]}
+            {messages.ctaButton2[language]}{" "}
+            <span className="text-base hidden md:inline">[A]</span>
           </button>
         </div>
         <section className="py-16 md:pr-6 flex">
           <div className="md:w-1/2">
-            <h2 className="text-2xl md:text-4xl font-medium">
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium">
               {messages.contribute[language]}{" "}
               <span className="text-orange-600 font-black">
                 {messages.contributeHighlight[language]}
-              </span>
+              </span>{" "}
+              <span className="text-base hidden md:inline">[3]</span>
             </h2>
             <div
               className="text-lg md:text-xl mt-2"
@@ -190,8 +196,9 @@ function App() {
         </section>
         <section className="pb-16 md:pr-6 flex flex-col space-y-6 md:space-y-0 md:flex-row">
           <div className="md:w-1/2">
-            <h2 className="text-xl md:text-3xl font-medium">
-              {messages.dataPrivacy[language]}
+            <h2 className="text-2xl md:text-3xl font-medium">
+              {messages.dataPrivacy[language]}{" "}
+              <span className="text-base hidden md:inline">[4]</span>
             </h2>
             <div
               className="text-lg md:text-xl mt-2"
@@ -217,7 +224,8 @@ function App() {
             onClick={handleGoToApp}
             className="bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl text-2xl font-medium"
           >
-            {messages.ctaButton3[language]}
+            {messages.ctaButton3[language]}{" "}
+            <span className="text-base hidden md:inline">[A]</span>
           </button>
         </div>
       </main>
