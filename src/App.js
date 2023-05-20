@@ -98,7 +98,7 @@ function App() {
             <div className="flex space-x-4">
               <button
                 onClick={handleGoToApp}
-                className="bg-indigo-600 hover:bg-indigo-700 text-white py-4 px-8 rounded-xl text-2xl"
+                className="bg-indigo-600 hover:bg-indigo-700 text-white py-6 px-8 rounded-xl text-2xl"
               >
                 {messages.ctaButton1[language]}{" "}
                 <span className="text-base hidden md:inline">[A]</span>
@@ -178,7 +178,7 @@ function App() {
           </div>
         </div>
       </header>
-      <main className="container flex flex-col mx-auto px-6 pb-40">
+      <main className="container flex flex-col mx-auto px-6">
         <section
           ref={section2Ref}
           className="flex flex-col md:flex-row pb-16 md:pl-6 flex justify-end"
@@ -193,7 +193,7 @@ function App() {
             </div>
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-2xl md:text-3xl font-medium">
+            <h2 className="text-2xl md:text-3xl">
               {messages.howItWorks[language]}{" "}
               <span className="text-base hidden md:inline">[2]</span>
             </h2>
@@ -214,7 +214,7 @@ function App() {
         <div className="flex justify-center md:w-1/2">
           <button
             onClick={handleGoToApp}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white py-4 px-8 rounded-xl text-2xl"
+            className="bg-indigo-600 hover:bg-indigo-700 text-white py-6 px-8 rounded-xl text-2xl"
           >
             {messages.ctaButton2[language]}{" "}
             <span className="text-base hidden md:inline">[A]</span>
@@ -263,12 +263,81 @@ function App() {
             </div>
           </div>
         </section>
-        <div className="flex justify-center">
+        <div className="flex md:w-1/2 justify-center pb-16">
           <button
             onClick={handleGoToApp}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white py-4 px-8 rounded-xl text-2xl"
+            className="bg-indigo-600 hover:bg-indigo-700 text-white py-6 px-8 rounded-xl text-2xl"
           >
             {messages.ctaButton3[language]}{" "}
+            <span className="text-base hidden md:inline">[A]</span>
+          </button>
+        </div>
+        <section
+          ref={section2Ref}
+          className="flex flex-col md:flex-row pb-16 md:pl-6 flex justify-end"
+        >
+          <div className="md:w-1/2 hidden md:block">
+            <div className="flex justify-center"></div>
+          </div>
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-4xl xl:text-5xl">
+              {messages.accessibilityLaw[language]}{" "}
+              <span className="text-base hidden md:inline">[5]</span>
+            </h2>
+            <div
+              className="text-lg md:text-xl mt-6"
+              dangerouslySetInnerHTML={{
+                __html: messages.accessibilityLawDescription[language],
+              }}
+            ></div>
+          </div>
+        </section>
+        <section
+          ref={section2Ref}
+          className="flex flex-col md:flex-row pb-16 md:pl-6 flex justify-end"
+        >
+          <div className="md:w-1/2">
+            <h2 className="text-2xl md:text-3xl">
+              {messages.openData[language]}{" "}
+              <span className="text-base hidden md:inline">[6]</span>
+            </h2>
+            <div
+              className="text-lg md:text-xl mt-6"
+              dangerouslySetInnerHTML={{
+                __html: messages.openDataDescription[language],
+              }}
+            ></div>
+          </div>
+          <div className="md:w-1/2 hidden md:block">
+            <div className="flex justify-center"></div>
+          </div>
+        </section>
+        <section
+          ref={section2Ref}
+          className="flex flex-col md:flex-row pb-16 md:pl-6 flex justify-end"
+        >
+          <div className="md:w-1/2">
+            <h2 className="text-2xl md:text-3xl">
+              {messages.translationModel[language]}{" "}
+              <span className="text-base hidden md:inline">[7]</span>
+            </h2>
+            <div
+              className="text-lg md:text-xl mt-6"
+              dangerouslySetInnerHTML={{
+                __html: messages.translationModelDescription[language],
+              }}
+            ></div>
+          </div>
+          <div className="md:w-1/2 hidden md:block">
+            <div className="flex justify-center"></div>
+          </div>
+        </section>
+        <div className="flex justify-center pb-40">
+          <button
+            onClick={handleGoToApp}
+            className="bg-indigo-600 hover:bg-indigo-700 text-white py-6 px-8 rounded-xl text-2xl"
+          >
+            {messages.ctaButton1[language]}{" "}
             <span className="text-base hidden md:inline">[A]</span>
           </button>
         </div>
