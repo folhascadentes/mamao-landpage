@@ -98,7 +98,9 @@ function App() {
                 title="Logo da Mamao"
                 style={{ height: "80px" }}
               />
-              <p className="text-4xl font-thin text-orange-600">MAMÃO</p>
+              <p className="text-4xl font-light md:font-thin text-orange-600">
+                MAMÃO
+              </p>
             </div>
             <div className="flex space-x-4">
               <button
@@ -141,11 +143,11 @@ function App() {
             </div>
           </div>
         </nav>
-        <div className="container mx-auto px-6 pt-24">
+        <div className="container mx-auto px-6 pt-24 pb-16">
           <div className="flex flex-col md:flex-row space-x-10">
             <div ref={section0Ref} className="md:w-2/3">
               <h1 className="text-5xl md:text-7xl xl:text-8xl">
-                <span className="text-orange-600 font-thin">
+                <span className="text-orange-600 font-light md:font-thin">
                   {messages.slogan[language]}
                 </span>{" "}
                 {messages.mainHeading[language]}{" "}
@@ -159,7 +161,7 @@ function App() {
               ></div>
               <section ref={section1Ref} className="pt-16 md:py-16 md:w-5/6">
                 <h2 className="text-3xl md:text-4xl">
-                  <span className="text-orange-600 font-thin">
+                  <span className="text-orange-600 font-light md:font-thin">
                     {messages.collaborate[language]}
                   </span>{" "}
                   {messages.collaborateText[language]}{" "}
@@ -173,10 +175,10 @@ function App() {
                 ></div>
               </section>
             </div>
-            <div className="md:w-1/3 flex justify-center">
+            <div className="md:w-1/3 flex hidden md:inline justify-center">
               <img
                 src={papaya3d}
-                style={{ height: "500px" }}
+                style={{ height: "450px" }}
                 alt="Signs Imgs"
               />
             </div>
@@ -229,7 +231,7 @@ function App() {
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl xl:text-5xl">
               {messages.contribute[language]}{" "}
-              <span className="text-orange-600 font-thin">
+              <span className="text-orange-600 font-light md:font-thin">
                 {messages.contributeHighlight[language]}
               </span>{" "}
               <span className="text-base hidden md:inline">[3]</span>
@@ -252,7 +254,7 @@ function App() {
             ></div>
           </div>
           <div className="md:w-1/2">
-            <div className="flex justify-center">
+            <div className="justify-center hidden md:flex">
               <img
                 src={shooting3d}
                 style={{ height: "400px" }}
@@ -286,7 +288,7 @@ function App() {
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl xl:text-5xl">
               {messages.accessibilityLawPreHighlight[language]}{" "}
-              <span className="text-orange-600 font-thin">
+              <span className="text-orange-600 font-light md:font-thin">
                 {messages.accessibilityLawHighlight[language]}{" "}
               </span>
               {messages.accessibilityLawPosHighlight[language]}{" "}
