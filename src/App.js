@@ -161,7 +161,7 @@ function App() {
               ></div>
               <section ref={section1Ref} className="pt-16 md:py-16 md:w-5/6">
                 <h2 className="text-3xl md:text-4xl">
-                  <span className="text-orange-600 font-light md:font-thin">
+                  <span className="text-orange-600 font-light">
                     {messages.collaborate[language]}
                   </span>{" "}
                   {messages.collaborateText[language]}{" "}
@@ -231,7 +231,7 @@ function App() {
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl xl:text-5xl">
               {messages.contribute[language]}{" "}
-              <span className="text-orange-600 font-light md:font-thin">
+              <span className="text-orange-600 font-light">
                 {messages.contributeHighlight[language]}
               </span>{" "}
               <span className="text-base hidden md:inline">[3]</span>
@@ -288,7 +288,7 @@ function App() {
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl xl:text-5xl">
               {messages.accessibilityLawPreHighlight[language]}{" "}
-              <span className="text-orange-600 font-light md:font-thin">
+              <span className="text-orange-600 font-light">
                 {messages.accessibilityLawHighlight[language]}{" "}
               </span>
               {messages.accessibilityLawPosHighlight[language]}{" "}
