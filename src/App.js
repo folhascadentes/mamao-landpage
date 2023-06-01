@@ -1,11 +1,11 @@
 import "./App.css";
-import logo from "./assets/papaya.png";
-import imageModel from "./assets/model.png";
-import imageSigns from "./assets/signs.svg";
-// import imageProtection from "./assets/protection.png";
+import database3d from "./assets/database3d.png";
+import law3d from "./assets/law3d.png";
+import papaya3d from "./assets/papaya3d.png";
+import person3d from "./assets/person3d.png";
+import shooting3d from "./assets/shooting3d.png";
 import React, { useState, useRef } from "react";
 import { HotKeys } from "react-hotkeys";
-// import { bionicReading } from "bionic-reading";
 import { messages } from "./i18n.js";
 import { MdContrast } from "react-icons/md";
 
@@ -92,8 +92,13 @@ function App() {
         <nav className="container mx-auto px-6 py-8">
           <div className="flex flex-wrap space-y-6 justify-between items-center">
             <div className="flex items-center space-x-4">
-              <img src={logo} alt="Papaya Logo" style={{ height: "80px" }} />
-              <p className="text-4xl font-light text-orange-600">MAMÃO</p>
+              <img
+                src={papaya3d}
+                alt="Logo da Mamao"
+                title="Logo da Mamao"
+                style={{ height: "80px" }}
+              />
+              <p className="text-4xl font-thin text-orange-600">MAMÃO</p>
             </div>
             <div className="flex space-x-4">
               <button
@@ -140,7 +145,7 @@ function App() {
           <div className="flex flex-col md:flex-row space-x-10">
             <div ref={section0Ref} className="md:w-2/3">
               <h1 className="text-5xl md:text-7xl xl:text-8xl">
-                <span className="text-orange-600 font-medium">
+                <span className="text-orange-600 font-thin">
                   {messages.slogan[language]}
                 </span>{" "}
                 {messages.mainHeading[language]}{" "}
@@ -154,7 +159,7 @@ function App() {
               ></div>
               <section ref={section1Ref} className="pt-16 md:py-16 md:w-5/6">
                 <h2 className="text-3xl md:text-4xl">
-                  <span className="text-orange-600 font-black">
+                  <span className="text-orange-600 font-thin">
                     {messages.collaborate[language]}
                   </span>{" "}
                   {messages.collaborateText[language]}{" "}
@@ -168,10 +173,10 @@ function App() {
                 ></div>
               </section>
             </div>
-            <div>
+            <div className="md:w-1/3 flex justify-center">
               <img
-                src={imageSigns}
-                style={{ height: "450px" }}
+                src={papaya3d}
+                style={{ height: "500px" }}
                 alt="Signs Imgs"
               />
             </div>
@@ -184,9 +189,9 @@ function App() {
           className="flex flex-col md:flex-row pb-16 md:pl-6 flex justify-end"
         >
           <div className="md:w-1/2 hidden md:block">
-            <div className="flex justify-center">
+            <div className="flex justify-center mr-10">
               <img
-                src={imageModel}
+                src={person3d}
                 style={{ height: "450px" }}
                 alt="Model Imgs"
               />
@@ -224,7 +229,7 @@ function App() {
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl xl:text-5xl">
               {messages.contribute[language]}{" "}
-              <span className="text-orange-600 font-black">
+              <span className="text-orange-600 font-thin">
                 {messages.contributeHighlight[language]}
               </span>{" "}
               <span className="text-base hidden md:inline">[3]</span>
@@ -235,14 +240,7 @@ function App() {
                 __html: messages.contributeDescription[language],
               }}
             ></div>
-          </div>
-        </section>
-        <section
-          ref={section4Ref}
-          className="pb-16 md:pr-6 flex flex-col space-y-6 md:space-y-0 md:flex-row"
-        >
-          <div className="md:w-1/2">
-            <h2 className="text-2xl md:text-3xl">
+            <h2 className="text-2xl md:text-3xl pt-16">
               {messages.dataPrivacy[language]}{" "}
               <span className="text-base hidden md:inline">[4]</span>
             </h2>
@@ -255,11 +253,11 @@ function App() {
           </div>
           <div className="md:w-1/2">
             <div className="flex justify-center">
-              {/* <img
-                src={imageProtection}
+              <img
+                src={shooting3d}
                 style={{ height: "400px" }}
-                alt="Protection Imgs"
-              /> */}
+                alt="Shooting leaf"
+              />
             </div>
           </div>
         </section>
@@ -277,11 +275,21 @@ function App() {
           className="flex flex-col md:flex-row pb-16 md:pl-6 flex justify-end"
         >
           <div className="md:w-1/2 hidden md:block">
-            <div className="flex justify-center"></div>
+            <div className="flex justify-center">
+              <img
+                src={law3d}
+                style={{ height: "325px" }}
+                alt="Balanca da justica"
+              />
+            </div>
           </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl xl:text-5xl">
-              {messages.accessibilityLaw[language]}{" "}
+              {messages.accessibilityLawPreHighlight[language]}{" "}
+              <span className="text-orange-600 font-thin">
+                {messages.accessibilityLawHighlight[language]}{" "}
+              </span>
+              {messages.accessibilityLawPosHighlight[language]}{" "}
               <span className="text-base hidden md:inline">[5]</span>
             </h2>
             <div
@@ -307,17 +315,7 @@ function App() {
                 __html: messages.openDataDescription[language],
               }}
             ></div>
-          </div>
-          <div className="md:w-1/2 hidden md:block">
-            <div className="flex justify-center"></div>
-          </div>
-        </section>
-        <section
-          ref={section2Ref}
-          className="flex flex-col md:flex-row pb-16 md:pl-6 flex justify-end"
-        >
-          <div className="md:w-1/2">
-            <h2 className="text-2xl md:text-3xl">
+            <h2 className="text-2xl md:text-3xl pt-16">
               {messages.translationModel[language]}{" "}
               <span className="text-base hidden md:inline">[7]</span>
             </h2>
@@ -329,10 +327,16 @@ function App() {
             ></div>
           </div>
           <div className="md:w-1/2 hidden md:block">
-            <div className="flex justify-center"></div>
+            <div className="flex justify-center mt-20">
+              <img
+                src={database3d}
+                style={{ height: "400px" }}
+                alt="Database Imgs"
+              />
+            </div>
           </div>
         </section>
-        <div className="flex justify-center pb-40">
+        <div className="flex justify-center">
           <button
             onClick={handleGoToApp}
             className="bg-indigo-600 hover:bg-indigo-700 text-white py-6 px-8 rounded-xl text-2xl"
@@ -340,6 +344,14 @@ function App() {
             {messages.ctaButton1[language]}{" "}
             <span className="text-base hidden md:inline">[A]</span>
           </button>
+        </div>
+        <div className="flex justify-center my-24">
+          {/* <img
+            src={shooting3d}
+            style={{ height: "350px" }}
+            alt="Folhas Cadentes"
+            title="Folhas Cadentes"
+          />*/}
         </div>
       </main>
     </HotKeys>

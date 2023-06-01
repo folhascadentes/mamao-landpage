@@ -84,10 +84,20 @@ export const messages = {
     en: "Rest assured! All collected data is collective property and can be used by the scientific community and other non-profit organizations. The database is open source, following the General Data Protection Law (LGPD), and we guaranteethat you can request the removal of your image from the database at any time. In case of commercial purposes, profits obtained from licensing will be directed towards supporting projects aimed at greater accessibility for the population, including the Libras interpreter community. Our commitment is to inclusion and protection of your data.",
     es: "¡No te preocupes! Todos los datos recopilados son propiedad colectiva y pueden ser utilizados por la comunidad científica y otras organizaciones sin fines de lucro. La base de datos es de código abierto, siguiendo la Ley General de Protección de Datos (LGPD), y garantizamos que puedes solicitar la eliminación de tu imagen de la base de datos en cualquier momento. En caso de fines comerciales, las ganancias obtenidas por la licencia se dirigirán a apoyar proyectos destinados a una mayor accesibilidad para la población, incluida la comunidad de intérpretes de Libras. Nuestro compromiso es con la inclusión y la protección de tus datos.",
   },
-  accessibilityLaw: {
-    pt: "A Lei da Acessibilidade Digital no Brasil",
-    en: "Digital Accessibility Law in Brazil",
-    es: "Ley de Accesibilidad Digital en Brasil",
+  accessibilityLawPreHighlight: {
+    pt: "A Lei da",
+    en: "",
+    es: "Ley de",
+  },
+  accessibilityLawHighlight: {
+    pt: "Acessbilidade Digital",
+    en: "Digital Accessibility",
+    es: "Accesibilidad Digital",
+  },
+  accessibilityLawPosHighlight: {
+    pt: "no Brasil",
+    en: "Law in Brazil",
+    es: "en Brasil",
   },
   accessibilityLawDescription: {
     pt: "No Brasil, a acessibilidade digital é mais do que uma iniciativa, é uma lei. O Decreto nº 5.296/2004 e a Lei Brasileira de Inclusão, Lei nº 13.146/2015, determinam que todos os serviços de informação e comunicação disponibilizados na internet devem ser totalmente acessíveis para pessoas com deficiência. Esta legislação é crucial para garantir que todas as pessoas, independentemente de suas habilidades, possam participar plenamente da sociedade digital. O projeto Mamão está alinhado com essa legislação e procura ir além, inovando na maneira como abordamos a acessibilidade digital.",
