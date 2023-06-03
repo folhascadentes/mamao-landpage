@@ -5,9 +5,10 @@ import papaya3d from "./assets/papaya3d.png";
 import person3d from "./assets/person3d.png";
 import shooting3d from "./assets/shooting3d.png";
 import React, { useEffect, useState, useRef } from "react";
-import { HotKeys } from "react-hotkeys";
 import { messages } from "./i18n.js";
-import { MdContrast } from "react-icons/md";
+import { HotKeys } from "react-hotkeys";
+import { MdContrast, MdKeyboardArrowDown } from "react-icons/md";
+import { Button, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 
 function App() {
   const focusRef = useRef(null);
@@ -23,7 +24,7 @@ function App() {
   const [textColor, setTextColor] = useState("rgb(31 41 55)");
   const [backgroundColor, setBackgroundColor] = useState("#f5f5f5");
   const [buttonHoverColorWeight, setButtonHoverColorWeight] = useState("200");
-  const language = "pt";
+  const [language, setLanguage] = useState("pt"); // ["pt", "en", "es"]
 
   useEffect(() => {
     if (focusRef.current) {
@@ -115,10 +116,10 @@ function App() {
                   MAMÃO
                 </p>
               </div>
-              <div className="flex space-x-4">
+              <div className="flex space-x-1 md:space-x-4">
                 <button
                   onClick={handleGoToApp}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white py-6 px-8 rounded-xl text-2xl"
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white py-6 px-8 rounded-xl text-2xl hidden md:inline"
                 >
                   {messages.ctaButton1[language]}{" "}
                   <span className="text-base hidden md:inline">[A]</span>
@@ -147,16 +148,48 @@ function App() {
                 <button
                   title="Ação de aumentar diminuir do texto [Ctrl-]"
                   aria-describedby="Ação de aumentar diminuir do texto"
-                  className={`hover:bg-gray-${buttonHoverColorWeight} rounded-xl px-4`}
+                  className={`hover:bg-gray-${buttonHoverColorWeight} rounded-xl px-4 `}
                   onClick={handleDecreaseFontSize}
                   style={{ fontSize: "24px" }}
                 >
                   A-
                 </button>
+                <div class="flex items-center pl-2.5 md:pl-4">
+                  <Menu>
+                    <MenuButton
+                      as={Button}
+                      rightIcon={<MdKeyboardArrowDown />}
+                      style={{ fontSize: "24px" }}
+                    >
+                      {language.toLocaleUpperCase()}
+                    </MenuButton>
+                    <MenuList
+                      minWidth="80px"
+                      style={{
+                        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+                        padding: "12px 16px",
+                        marginTop: "-24px",
+                        borderRadius: "1rem",
+                        fontSize: "24px",
+                      }}
+                      bg="gray-500"
+                    >
+                      <MenuItem my={4} onClick={() => setLanguage("pt")}>
+                        PT
+                      </MenuItem>
+                      <MenuItem my={4} onClick={() => setLanguage("en")}>
+                        EN
+                      </MenuItem>
+                      <MenuItem my={4} onClick={() => setLanguage("es")}>
+                        ES
+                      </MenuItem>
+                    </MenuList>
+                  </Menu>
+                </div>
               </div>
             </div>
           </nav>
-          <div className="container mx-auto px-6 pt-24 pb-16">
+          <div className="container mx-auto px-6 pt-16 md:pt-24 pb-16">
             <div className="flex flex-col md:flex-row space-x-10">
               <div ref={section0Ref} className="md:w-2/3">
                 <h1 className="text-5xl md:text-7xl xl:text-8xl">
