@@ -20,11 +20,29 @@ function App() {
   const section5Ref = useRef(null);
   const section6Ref = useRef(null);
   const section7Ref = useRef(null);
-  const [fontSize, setFontSize] = useState(100);
-  const [textColor, setTextColor] = useState("rgb(31 41 55)");
-  const [backgroundColor, setBackgroundColor] = useState("#f5f5f5");
-  const [buttonHoverColorWeight, setButtonHoverColorWeight] = useState("200");
-  const [language, setLanguage] = useState("pt"); // ["pt", "en", "es"]
+  const [fontSize, setFontSize] = useState(
+    localStorage.getItem("fontSize")
+      ? Number(localStorage.getItem("fontSize"))
+      : 100
+  );
+  const [textColor, setTextColor] = useState(
+    localStorage.getItem("textColor")
+      ? localStorage.getItem("textColor")
+      : "#fffff"
+  );
+  const [backgroundColor, setBackgroundColor] = useState(
+    localStorage.getItem("backgroundColor")
+      ? localStorage.getItem("backgroundColor")
+      : "#f5f5f5"
+  );
+  const [buttonHoverColorWeight, setButtonHoverColorWeight] = useState(
+    localStorage.getItem("buttonHoverColorWeight")
+      ? localStorage.getItem("buttonHoverColorWeight")
+      : "200"
+  );
+  const [language, setLanguage] = useState(
+    localStorage.getItem("language") ? localStorage.getItem("language") : "pt"
+  ); // ["pt", "en", "es"]
 
   useEffect(() => {
     if (focusRef.current) {
@@ -39,17 +57,43 @@ function App() {
   };
 
   const handleHightConstast = () => {
-    setBackgroundColor((bg) => (bg === "#000000" ? "#f5f5f5" : "#000000"));
-    setTextColor((text) => (text === "#ffffff" ? "#000000" : "#ffffff"));
-    setButtonHoverColorWeight((weight) => (weight === "800" ? "200" : "800"));
+    setBackgroundColor((bg) => {
+      const value = bg === "#000000" ? "#f5f5f5" : "#000000";
+      localStorage.setItem("backgroundColor", value);
+      return value;
+    });
+    setTextColor((text) => {
+      const value = text === "#ffffff" ? "#000000" : "#ffffff";
+      localStorage.setItem("textColor", value);
+
+      return value;
+    });
+    setButtonHoverColorWeight((weight) => {
+      const value = weight === "800" ? "200" : "800";
+      localStorage.setItem("buttonHoverColorWeight", value);
+      return value;
+    });
+  };
+
+  const handleChangeLanguage = (lg) => {
+    setLanguage(lg);
+    localStorage.setItem("language", lg);
   };
 
   const handleIncreaseFontSize = () => {
-    setFontSize((fontSize) => fontSize + 10);
+    setFontSize((fontSize) => {
+      const value = fontSize + 10;
+      localStorage.setItem("fontSize", value);
+      return value;
+    });
   };
 
   const handleDecreaseFontSize = () => {
-    setFontSize((fontSize) => fontSize - 10);
+    setFontSize((fontSize) => {
+      const value = fontSize - 10;
+      localStorage.setItem("fontSize", value);
+      return value;
+    });
   };
 
   const keyMap = {
@@ -154,7 +198,7 @@ function App() {
                 >
                   A-
                 </button>
-                <div class="flex items-center pl-2.5 md:pl-4">
+                <div className="flex items-center pl-2.5 md:pl-4">
                   <Menu>
                     <MenuButton
                       as={Button}
@@ -174,13 +218,22 @@ function App() {
                       }}
                       bg="gray-500"
                     >
-                      <MenuItem my={4} onClick={() => setLanguage("pt")}>
+                      <MenuItem
+                        my={4}
+                        onClick={() => handleChangeLanguage("pt")}
+                      >
                         PT
                       </MenuItem>
-                      <MenuItem my={4} onClick={() => setLanguage("en")}>
+                      <MenuItem
+                        my={4}
+                        onClick={() => handleChangeLanguage("en")}
+                      >
                         EN
                       </MenuItem>
-                      <MenuItem my={4} onClick={() => setLanguage("es")}>
+                      <MenuItem
+                        my={4}
+                        onClick={() => handleChangeLanguage("es")}
+                      >
                         ES
                       </MenuItem>
                     </MenuList>
