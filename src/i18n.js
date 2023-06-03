@@ -90,7 +90,7 @@ export const messages = {
     es: "Ley de",
   },
   accessibilityLawHighlight: {
-    pt: "Acessbilidade Digital",
+    pt: "Acessibilidade Digital",
     en: "Digital Accessibility",
     es: "Accesibilidad Digital",
   },
