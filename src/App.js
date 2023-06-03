@@ -15,11 +15,12 @@ function App() {
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
   const section4Ref = useRef(null);
+  const section5Ref = useRef(null);
+  const section6Ref = useRef(null);
+  const section7Ref = useRef(null);
   const [fontSize, setFontSize] = useState(100);
-  let _fontSize = 100;
   const [textColor, setTextColor] = useState("rgb(31 41 55)");
   const [backgroundColor, setBackgroundColor] = useState("#f5f5f5");
-  let _backgroundColor = "#f5f5f5";
   const [buttonHoverColorWeight, setButtonHoverColorWeight] = useState("200");
   const language = "pt";
 
@@ -28,27 +29,17 @@ function App() {
   };
 
   const handleHightConstast = () => {
-    if (_backgroundColor === "#f5f5f5") {
-      _backgroundColor = "#000000";
-      setBackgroundColor("#000000");
-      setTextColor("#ffffff");
-      setButtonHoverColorWeight("800");
-    } else {
-      _backgroundColor = "#f5f5f5";
-      setBackgroundColor("#f5f5f5");
-      setTextColor("rgb(31 41 55)");
-      setButtonHoverColorWeight("200");
-    }
+    setBackgroundColor((bg) => (bg === "#000000" ? "#f5f5f5" : "#000000"));
+    setTextColor((text) => (text === "#ffffff" ? "#000000" : "#ffffff"));
+    setButtonHoverColorWeight((weight) => (weight === "800" ? "200" : "800"));
   };
 
   const handleIncreaseFontSize = () => {
-    setFontSize(_fontSize + 10);
-    _fontSize += 10;
+    setFontSize((fontSize) => fontSize + 10);
   };
 
   const handleDecreaseFontSize = () => {
-    setFontSize(_fontSize - 10);
-    _fontSize -= 10;
+    setFontSize((fontSize) => fontSize - 10);
   };
 
   const keyMap = {
@@ -61,6 +52,9 @@ function App() {
     section2: "2",
     section3: "3",
     section4: "4",
+    section5: "5",
+    section6: "6",
+    section7: "7",
   };
 
   const shortcutHandlers = {
@@ -82,6 +76,15 @@ function App() {
     },
     section4: () => {
       section4Ref.current.scrollIntoView({ behavior: "smooth" });
+    },
+    section5: () => {
+      section5Ref.current.scrollIntoView({ behavior: "smooth" });
+    },
+    section6: () => {
+      section6Ref.current.scrollIntoView({ behavior: "smooth" });
+    },
+    section7: () => {
+      section7Ref.current.scrollIntoView({ behavior: "smooth" });
     },
   };
 
@@ -227,9 +230,9 @@ function App() {
             <span className="text-base hidden md:inline">[A]</span>
           </button>
         </div>
-        <section ref={section3Ref} className="py-16 md:pr-6 flex">
+        <section className="py-16 md:pr-6 flex">
           <div className="md:w-1/2">
-            <h2 className="text-3xl md:text-4xl xl:text-5xl">
+            <h2 ref={section3Ref} className="text-3xl md:text-4xl xl:text-5xl">
               {messages.contribute[language]}{" "}
               <span className="text-orange-600 font-light">
                 {messages.contributeHighlight[language]}
@@ -242,7 +245,7 @@ function App() {
                 __html: messages.contributeDescription[language],
               }}
             ></div>
-            <h2 className="text-2xl md:text-3xl pt-16">
+            <h2 ref={section4Ref} className="text-2xl md:text-3xl pt-16">
               {messages.dataPrivacy[language]}{" "}
               <span className="text-base hidden md:inline">[4]</span>
             </h2>
@@ -273,7 +276,7 @@ function App() {
           </button>
         </div>
         <section
-          ref={section2Ref}
+          ref={section5Ref}
           className="flex flex-col md:flex-row pb-16 md:pl-6 flex justify-end"
         >
           <div className="md:w-1/2 hidden md:block">
@@ -302,12 +305,9 @@ function App() {
             ></div>
           </div>
         </section>
-        <section
-          ref={section2Ref}
-          className="flex flex-col md:flex-row pb-16 md:pl-6 flex justify-end"
-        >
+        <section className="flex flex-col md:flex-row pb-16 md:pl-6 flex justify-end">
           <div className="md:w-1/2">
-            <h2 className="text-2xl md:text-3xl">
+            <h2 ref={section6Ref} className="text-2xl md:text-3xl">
               {messages.openData[language]}{" "}
               <span className="text-base hidden md:inline">[6]</span>
             </h2>
@@ -317,7 +317,7 @@ function App() {
                 __html: messages.openDataDescription[language],
               }}
             ></div>
-            <h2 className="text-2xl md:text-3xl pt-16">
+            <h2 ref={section7Ref} className="text-2xl md:text-3xl pt-16">
               {messages.translationModel[language]}{" "}
               <span className="text-base hidden md:inline">[7]</span>
             </h2>
