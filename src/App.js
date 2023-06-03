@@ -3,6 +3,11 @@ import database3d from "./assets/database3d.png";
 import law3d from "./assets/law3d.png";
 import papaya3d from "./assets/papaya3d.png";
 import person3d from "./assets/person3d.png";
+import person3dPt from "./assets/person3d_pt.png";
+import person3dEn from "./assets/person3d_en.png";
+import person3dEs from "./assets/person3d_es.png";
+import person3dFr from "./assets/person3d_fr.png";
+import person3dDe from "./assets/person3d_de.png";
 import shooting3d from "./assets/shooting3d.png";
 import React, { useEffect, useState, useRef } from "react";
 import { messages } from "./i18n.js";
@@ -42,7 +47,15 @@ function App() {
   );
   const [language, setLanguage] = useState(
     localStorage.getItem("language") ? localStorage.getItem("language") : "pt"
-  ); // ["pt", "en", "es"]
+  ); // ["pt", "en", "es", "fr", "de"]
+
+  const personMapper = {
+    pt: person3dPt,
+    en: person3dEn,
+    es: person3dEs,
+    fr: person3dFr,
+    de: person3dDe,
+  };
 
   useEffect(() => {
     if (focusRef.current) {
@@ -212,7 +225,6 @@ function App() {
                       style={{
                         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
                         padding: "12px 16px",
-                        marginTop: "-24px",
                         borderRadius: "1rem",
                         fontSize: "24px",
                       }}
@@ -235,6 +247,18 @@ function App() {
                         onClick={() => handleChangeLanguage("es")}
                       >
                         ES
+                      </MenuItem>
+                      <MenuItem
+                        my={4}
+                        onClick={() => handleChangeLanguage("fr")}
+                      >
+                        FR
+                      </MenuItem>
+                      <MenuItem
+                        my={4}
+                        onClick={() => handleChangeLanguage("de")}
+                      >
+                        DE
                       </MenuItem>
                     </MenuList>
                   </Menu>
@@ -287,7 +311,11 @@ function App() {
           >
             <div className="md:w-1/2 hidden md:block">
               <div className="flex justify-center mr-10">
-                <img src={person3d} style={{ height: "450px" }} alt="" />
+                <img
+                  src={personMapper[language]}
+                  style={{ height: "450px" }}
+                  alt=""
+                />
               </div>
             </div>
             <div className="md:w-1/2">
