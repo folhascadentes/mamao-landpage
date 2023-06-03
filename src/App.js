@@ -2,12 +2,12 @@ import "./App.css";
 import database3d from "./assets/database3d.png";
 import law3d from "./assets/law3d.png";
 import papaya3d from "./assets/papaya3d.png";
-import person3d from "./assets/person3d.png";
 import person3dPt from "./assets/person3d_pt.png";
 import person3dEn from "./assets/person3d_en.png";
 import person3dEs from "./assets/person3d_es.png";
 import person3dFr from "./assets/person3d_fr.png";
 import person3dDe from "./assets/person3d_de.png";
+import person3dJp from "./assets/person3d_jp.png";
 import shooting3d from "./assets/shooting3d.png";
 import React, { useEffect, useState, useRef } from "react";
 import { messages } from "./i18n.js";
@@ -47,7 +47,9 @@ function App() {
   );
   const [language, setLanguage] = useState(
     localStorage.getItem("language") ? localStorage.getItem("language") : "pt"
-  ); // ["pt", "en", "es", "fr", "de"]
+  );
+
+  const languages = ["pt", "en", "es", "fr", "de", "jp"];
 
   const personMapper = {
     pt: person3dPt,
@@ -55,6 +57,7 @@ function App() {
     es: person3dEs,
     fr: person3dFr,
     de: person3dDe,
+    jp: person3dJp,
   };
 
   useEffect(() => {
@@ -230,36 +233,14 @@ function App() {
                       }}
                       bg="gray-500"
                     >
-                      <MenuItem
-                        my={4}
-                        onClick={() => handleChangeLanguage("pt")}
-                      >
-                        PT
-                      </MenuItem>
-                      <MenuItem
-                        my={4}
-                        onClick={() => handleChangeLanguage("en")}
-                      >
-                        EN
-                      </MenuItem>
-                      <MenuItem
-                        my={4}
-                        onClick={() => handleChangeLanguage("es")}
-                      >
-                        ES
-                      </MenuItem>
-                      <MenuItem
-                        my={4}
-                        onClick={() => handleChangeLanguage("fr")}
-                      >
-                        FR
-                      </MenuItem>
-                      <MenuItem
-                        my={4}
-                        onClick={() => handleChangeLanguage("de")}
-                      >
-                        DE
-                      </MenuItem>
+                      {languages.map((language) => (
+                        <MenuItem
+                          my={4}
+                          onClick={() => handleChangeLanguage(language)}
+                        >
+                          {language.toUpperCase()}
+                        </MenuItem>
+                      ))}
                     </MenuList>
                   </Menu>
                 </div>

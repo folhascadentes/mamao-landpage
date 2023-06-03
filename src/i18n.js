@@ -5,6 +5,7 @@ export const messages = {
     es: "Ayudar",
     fr: "Aider",
     de: "Helfen",
+    jp: "助ける",
   },
   ctaButton2: {
     pt: "Nos dê uma mão",
@@ -12,6 +13,7 @@ export const messages = {
     es: "Dale una mano",
     fr: "Donnez-nous un coup de main",
     de: "Geben Sie uns eine Hand",
+    jp: "助ける",
   },
   ctaButton3: {
     pt: "Dar uma mão",
@@ -19,6 +21,7 @@ export const messages = {
     es: "Dale una mano",
     fr: "Donner un coup de main",
     de: "Eine Hand geben",
+    jp: "手を貸す",
   },
   slogan: {
     pt: "Dê uma mão",
@@ -26,6 +29,7 @@ export const messages = {
     es: "Dale una mano",
     fr: "Donner un coup de main",
     de: "Eine Hand geben",
+    jp: "手を貸す",
   },
   mainHeading: {
     pt: "para superar barreiras de comunicação",
@@ -33,6 +37,7 @@ export const messages = {
     es: "para superar las barreras de comunicación",
     fr: "pour surmonter les barrières de communication",
     de: "um Kommunikationsbarrieren zu überwinden",
+    jp: "コミュニケーションの障壁を克服するために",
   },
   mainText: {
     pt: "A Libras (Língua Brasileira de Sinais) é a segunda língua oficial do Brasil, mas poucos a dominam. Participe do projeto Mamão e faça a diferença na comunicação inclusiva!",
@@ -40,6 +45,7 @@ export const messages = {
     es: "La Lengua Brasileña de Señas (Libras) es la segunda lengua oficial de Brasil, pero pocos la conocen. Únete al proyecto Mamão y haz la diferencia en la comunicación inclusiva!",
     fr: "La Libras (Langue des signes brésilienne) est la deuxième langue officielle du Brésil, mais peu de gens la connaissent. Rejoignez le projet Mamão et faites la différence dans la communication inclusive!",
     de: "Libras (Brasilianische Gebärdensprache) ist die zweite Amtssprache in Brasilien, aber nur wenige Menschen kennen sie. Machen Sie mit beim Mamão-Projekt und machen Sie einen Unterschied in der inklusiven Kommunikation!",
+    jp: "Libras（ブラジル手話）はブラジルの第二公用語ですが、知っている人は少ないです。ママオプロジェクトに参加し、包括的なコミュニケーションに違いを生み出しましょう！",
   },
   collaborate: {
     pt: "Colabore",
@@ -47,6 +53,7 @@ export const messages = {
     es: "Colaborar",
     fr: "Collaborer",
     de: "Zusammenarbeiten",
+    jp: "協力する",
   },
   collaborateText: {
     pt: "na criação do primeiro tradutor Libras-Português",
@@ -54,6 +61,7 @@ export const messages = {
     es: "en la creación del primer traductor Libras-Portugués",
     fr: "dans la création du premier traducteur Libras-Portugais",
     de: "bei der Erstellung des ersten Libras-Portugiesisch Übersetzers",
+    jp: "初のLibras-ポルトガル語翻訳者の作成に協力する",
   },
   collaborateDescription: {
     pt: "Estamos trabalhando para desenvolver o primeiro tradutor de Libras para português com inteligência artificial avançada. Contamos com sua ajuda para criar uma base de dados completa dos sinais de Libras, tornando a comunicação mais acessível e inclusiva. Faça parte dessa transformação na linguagem!",
@@ -61,6 +69,7 @@ export const messages = {
     es: "Estamos trabajando para desarrollar el primer traductor de Libras al portugués con inteligencia artificial avanzada. Contamos con su ayuda para crear una base de datos completa de los signos de Libras, lo que hace que la comunicación sea más accesible e inclusiva. ¡Sé parte de esta transformación en el lenguaje!",
     fr: "Nous travaillons à développer le premier traducteur de Langue des signes brésilienne (Libras) vers le portugais avec une intelligence artificielle avancée. Nous comptons sur votre aide pour créer une base de données complète des signes Libras, rendant la communication plus accessible et inclusive. Faites partie de cette transformation de la langue !",
     de: "Wir arbeiten daran, den ersten Gebärdensprachübersetzer von Libras ins Portugiesische mit fortschrittlicher künstlicher Intelligenz zu entwickeln. Wir zählen auf Ihre Hilfe, um eine vollständige Datenbank mit Libras-Signalen zu erstellen, die Kommunikation zugänglicher und inklusiver macht. Seien Sie Teil dieser Transformation der Sprache!",
+    jp: "我々は先進的なAIを用いて、初のLibrasからポルトガル語への翻訳器を開発するために努力しています。Librasの手話の完全なデータベースを作成するために、あなたの助けを必要としています。それによって、コミュニケーションがよりアクセシブルで包括的になります。この言語の変革の一部となりましょう！",
   },
   howItWorks: {
     pt: "Como funciona",
@@ -68,6 +77,7 @@ export const messages = {
     es: "Cómo funciona",
     fr: "Comment ça marche",
     de: "Wie es funktioniert",
+    jp: "仕組み",
   },
   howItWorksDescription1: {
     pt: "Para criar nosso tradutor Libras-Português, precisamos unir a construção de uma base de dados e o uso de inteligência artificial. A base de dados funciona como um repositório amplo de sinais de Libras, possibilitando o aprendizado e compreensão da linguagem pela inteligência artificial. Com essa combinação, nosso tradutor identificará e traduzirá sinais de Libras de forma precisa e ágil.",
@@ -75,6 +85,7 @@ export const messages = {
     es: "Para crear nuestro traductor Libras-Portugués, necesitamos combinar la construcción de una base de datos con el uso de inteligencia artificial. La base de datos funciona como un amplio repositorio de signos de Libras, permitiendo que la inteligencia artificial aprenda y comprenda el lenguaje. Con esta combinación, nuestro traductor identificará y traducirá los signos de Libras con precisión y rapidez.",
     fr: "Pour créer notre traducteur de Libras en portugais, nous devons combiner la construction d'une base de données avec l'utilisation de l'intelligence artificielle. La base de données fonctionne comme un large répertoire de signes Libras, permettant à l'intelligence artificielle d'apprendre et de comprendre la langue. Avec cette combinaison, notre traducteur identifiera et traduira les signes Libras de manière précise et rapide.",
     de: "Um unseren Libras-Portugiesisch-Übersetzer zu erstellen, müssen wir den Aufbau einer Datenbank mit der Nutzung von künstlicher Intelligenz kombinieren. Die Datenbank fungiert als breites Repository für Libras-Zeichen, das es der künstlichen Intelligenz ermöglicht, die Sprache zu lernen und zu verstehen. Mit dieser Kombination wird unser Übersetzer Libras-Zeichen genau und schnell identifizieren und übersetzen.",
+    jp: "私たちの手話-ポルトガル語の翻訳機を作成するためには、データベースの構築と人工知能の使用を組み合わせる必要があります。データベースは、手話の広範なリポジトリとして機能し、人工知能が言語を学習し理解することを可能にします。この組み合わせにより、翻訳機は手話のサインを正確かつ迅速に識別し翻訳します。",
   },
   howItWorksDescription2: {
     pt: "A inteligência artificial emprega algoritmos de aprendizado de máquina para examinar a base de dados, identificar padrões e estabelecer relações entre sinais de Libras e o português. Quanto mais informações forem coletadas e disponibilizadas, mais eficientes e eficazes serão as traduções. Sua participação é fundamental para aprimorar o entendimento da inteligência artificial e garantir uma comunicação acessível e inclusiva para a comunidade surda.",
@@ -82,6 +93,7 @@ export const messages = {
     es: "La inteligencia artificial utiliza algoritmos de aprendizaje automático para examinar la base de datos, identificar patrones y establecer relaciones entre los signos de Libras y el portugués. Cuanta más información se recoja y se ponga a disposición, más eficientes y efectivas serán las traducciones. Su participación es fundamental para mejorar la comprensión de la inteligencia artificial y garantizar una comunicación accesible e inclusiva para la comunidad sorda.",
     fr: "L'intelligence artificielle utilise des algorithmes d'apprentissage automatique pour examiner la base de données, identifier des modèles et établir des relations entre les signes Libras et le portugais. Plus l'information est collectée et mise à disposition, plus les traductions seront efficaces et précises. Votre participation est essentielle pour améliorer la compréhension de l'intelligence artificielle et garantir une communication accessible et inclusive pour la communauté sourde.",
     de: "Künstliche Intelligenz nutzt Algorithmen des maschinellen Lernens, um die Datenbank zu untersuchen, Muster zu identifizieren und Beziehungen zwischen Libras-Zeichen und Portugiesisch herzustellen. Je mehr Informationen gesammelt und zur Verfügung gestellt werden, desto effizienter und effektiver werden die Übersetzungen sein. Ihre Beteiligung ist entscheidend, um das Verständnis der künstlichen Intelligenz zu verbessern und eine zugängliche und inklusive Kommunikation für die Gehörlosengemeinschaft zu gewährleisten.",
+    jp: "人工知能は、データベースを調べ、パターンを識別し、手話のサインとポルトガル語との間の関係を確立するために機械学習アルゴリズムを使用します。収集され、利用可能な情報が多ければ多いほど、翻訳はより効率的かつ効果的になります。人工知能の理解を改善し、聴覚障害者コミュニティのためのアクセシブルで包括的なコミュニケーションを確保するために、あなたの参加が必要です。",
   },
   contribute: {
     pt: "Como você pode",
@@ -89,6 +101,7 @@ export const messages = {
     es: "Cómo puedes",
     fr: "Comment vous pouvez",
     de: "Wie Sie können",
+    jp: "どのように",
   },
   contributeHighlight: {
     pt: "contribuir",
@@ -96,6 +109,7 @@ export const messages = {
     es: "contribuir",
     fr: "contribuer",
     de: "beitragen",
+    jp: "貢献",
   },
   contributeDescription: {
     pt: "Para apoiar essa causa, você não precisa ser um especialista em Libras! Qualquer pessoa pode contribuir, independentemente de conhecer ou não a língua de sinais. Basta se cadastrar em nossa plataforma e seguir as instruções simples e rápidas. Mesmo com apenas 5 minutos do seu tempo, você pode fazer uma grande diferença. Juntos, podemos tornar a comunicação entre pessoas surdas e ouvintes mais inclusiva e acessível. Participe e ajude-nos a construir um mundo mais conectado e inclusivo!",
@@ -103,6 +117,7 @@ export const messages = {
     es: "Para apoyar esta causa, ¡no necesitas ser un experto en lengua de señas! Cualquier persona puede contribuir, independientemente de si conoce o no la lengua de señas. Solo necesitas registrarte en nuestra plataforma y seguir las instrucciones rápidas y sencillas. Incluso con solo 5 minutos de tu tiempo, puedes marcar una gran diferencia. Juntos, podemos hacer que la comunicación entre personas sordas y oyentes sea más inclusiva y accesible. ¡Únete a nosotros y ayuda a construir un mundo más conectado e inclusivo!",
     fr: "Pour soutenir cette cause, vous n'avez pas besoin d'être un expert en langue des signes! Tout le monde peut contribuer, qu'il connaisse ou non la langue des signes. Il vous suffit de vous inscrire sur notre plateforme et de suivre les instructions simples et rapides. Même avec seulement 5 minutes de votre temps, vous pouvez faire une grande différence. Ensemble, nous pouvons rendre la communication entre les personnes sourdes et entendantes plus inclusive et accessible. Rejoignez-nous et aidez-nous à construire un monde plus connecté et inclusif!",
     de: "Um diese Sache zu unterstützen, müssen Sie kein Experte für Gebärdensprache sein! Jeder kann beitragen, ob er die Gebärdensprache kennt oder nicht. Sie müssen sich nur auf unserer Plattform registrieren und den schnellen und einfachen Anweisungen folgen. Selbst mit nur 5 Minuten Ihrer Zeit können Sie einen großen Unterschied machen. Gemeinsam können wir die Kommunikation zwischen Gehörlosen und Hörenden inklusiver und zugänglicher gestalten. Schließen Sie sich uns an und helfen Sie uns, eine besser vernetzte und inklusive Welt zu schaffen!",
+    jp: "この原因を支持するために、手話の専門家である必要はありません！手話を知っているかどうかに関係なく、誰でも貢献することができます。私たちのプラットフォームに登録し、簡単かつ迅速な指示に従うだけです。あなたの時間がたった5分でも、大きな違いを生むことができます。一緒に、聴覚障害者と聴覚者の間のコミュニケーションをより包括的でアクセシブルにしましょう。私たちに参加して、よりつながりのある包括的な世界を築きましょう！",
   },
   dataPrivacy: {
     pt: "E os meus dados?",
@@ -110,6 +125,7 @@ export const messages = {
     es: "¿Y mis datos?",
     fr: "Et mes données?",
     de: "Und meine Daten?",
+    jp: "そして私のデータは？",
   },
   dataPrivacyDescription: {
     pt: "Fique tranquilo! Todos os dados coletados são propriedade coletiva e poderão ser utilizados pela comunidade científica e outras organizações sem fins comerciais. A base de dados é de código aberto, seguindo as normas da Lei Geral de Proteção de Dados (LGPD), e garantimos que você pode solicitar a remoção da sua imagem da base de dados a qualquer momento. Em caso de objetivos comerciais, os lucros obtidos com o licenciamento serão direcionados ao apoio de projetos voltados à maior acessibilidade para a população, incluindo a comunidade de intérpretes de libras. Nosso compromisso é com a inclusão e a proteção dos seus dados.",
@@ -117,6 +133,7 @@ export const messages = {
     es: "¡No te preocupes! Todos los datos recopilados son propiedad colectiva y pueden ser utilizados por la comunidad científica y otras organizaciones sin fines de lucro. La base de datos es de código abierto, siguiendo la Ley General de Protección de Datos (LGPD), y garantizamos que puedes solicitar la eliminación de tu imagen de la base de datos en cualquier momento. En caso de fines comerciales, las ganancias obtenidas por la licencia se dirigirán a apoyar proyectos destinados a una mayor accesibilidad para la población, incluida la comunidad de intérpretes de Libras. Nuestro compromiso es con la inclusión y la protección de tus datos.",
     fr: "Soyez tranquille ! Toutes les données collectées sont une propriété collective et peuvent être utilisées par la communauté scientifique et d'autres organisations à but non lucratif. La base de données est en open source, suivant la Loi Générale de Protection des Données (LGPD), et nous garantissons que vous pouvez demander la suppression de votre image de la base de données à tout moment. En cas d'objectifs commerciaux, les profits obtenus par le biais des licences seront destinés à soutenir des projets visant à une plus grande accessibilité pour la population, y compris la communauté des interprètes de Libras. Notre engagement est envers l'inclusion et la protection de vos données.",
     de: "Seien Sie unbesorgt! Alle gesammelten Daten sind Gemeineigentum und können von der wissenschaftlichen Gemeinschaft und anderen gemeinnützigen Organisationen verwendet werden. Die Datenbank ist Open Source und folgt der Allgemeinen Datenschutzverordnung (LGPD), und wir garantieren, dass Sie jederzeit die Entfernung Ihres Bildes aus der Datenbank anfordern können. Im Falle kommerzieller Zwecke werden die Lizenzgebühren zur Unterstützung von Projekten verwendet, die auf eine größere Zugänglichkeit für die Bevölkerung abzielen, einschließlich der Gemeinschaft der Gebärdensprachdolmetscher. Unser Engagement gilt der Inklusion und dem Schutz Ihrer Daten.",
+    jp: "安心してください！収集されたすべてのデータは集団所有物であり、科学コミュニティや他の非営利団体によって使用することができます。データベースはオープンソースであり、一般的なプライバシーと安全性の規定に厳密に準拠しています。個々の情報は決して特定の個人にリンクされません。私たちの目標は、科学的な探求と研究の進行を可能にするだけでなく、聴覚障害者コミュニティにとって有益な解決策を提供することです。",
   },
   accessibilityLawPreHighlight: {
     pt: "A Lei da",
@@ -124,6 +141,7 @@ export const messages = {
     es: "Ley de",
     fr: "La Loi de",
     de: "Das Gesetz der",
+    jp: "",
   },
   accessibilityLawHighlight: {
     pt: "Acessibilidade Digital",
@@ -131,6 +149,7 @@ export const messages = {
     es: "Accesibilidad Digital",
     fr: "Accessibilité Numérique",
     de: "Digitale Barrierefreiheit",
+    jp: "デジタルアクセシビリティ",
   },
   accessibilityLawPosHighlight: {
     pt: "no Brasil",
@@ -138,6 +157,7 @@ export const messages = {
     es: "en Brasil",
     fr: "au Brésil",
     de: "in Brasilien",
+    jp: "",
   },
   accessibilityLawDescription: {
     pt: "No Brasil, a acessibilidade digital é mais do que uma iniciativa, é uma lei. O Decreto nº 5.296/2004 e a Lei Brasileira de Inclusão, Lei nº 13.146/2015, determinam que todos os serviços de informação e comunicação disponibilizados na internet devem ser totalmente acessíveis para pessoas com deficiência. Esta legislação é crucial para garantir que todas as pessoas, independentemente de suas habilidades, possam participar plenamente da sociedade digital. O projeto Mamão está alinhado com essa legislação e procura ir além, inovando na maneira como abordamos a acessibilidade digital.",
@@ -145,6 +165,7 @@ export const messages = {
     es: "En Brasil, la accesibilidad digital es más que una iniciativa, es una ley. De acuerdo con el Decreto Nº 5.296/2004 y la Ley Brasileña de Inclusión, Ley Nº 13.146/2015, todos los servicios de información y comunicación ofrecidos en internet deben ser totalmente accesibles para personas con discapacidades. Esta legislación es crucial para garantizar que todas las personas, independientemente de sus habilidades, puedan participar plenamente en la sociedad digital. El proyecto Papaya se alinea con esta legislación y busca ir más allá, innovando en cómo abordamos la accesibilidad digital.",
     fr: "Au Brésil, l'accessibilité numérique est plus qu'une initiative, c'est une loi. Selon le Décret n° 5.296/2004 et la Loi Brésilienne sur l'Inclusion, la Loi n° 13.146/2015, tous les services d'information et de communication proposés sur Internet doivent être entièrement accessibles aux personnes handicapées. Cette législation est cruciale pour garantir que tout le monde, quelle que soit ses capacités, puisse participer pleinement à la société numérique. Le projet Papaye est aligné sur cette législation et cherche à aller plus loin, en innovant dans notre approche de l'accessibilité numérique.",
     de: "In Brasilien ist digitale Barrierefreiheit mehr als eine Initiative, es ist ein Gesetz. Gemäß Dekret Nr. 5.296/2004 und dem brasilianischen Inklusionsgesetz, Gesetz Nr. 13.146/2015, müssen alle Informations- und Kommunikationsdienste, die im Internet angeboten werden, vollständig für Menschen mit Behinderungen zugänglich sein. Diese Gesetzgebung ist von entscheidender Bedeutung, um sicherzustellen, dass jeder, unabhängig von seinen Fähigkeiten, vollständig an der digitalen Gesellschaft teilnehmen kann. Das Papaya-Projekt richtet sich nach dieser Gesetzgebung und sucht darüber hinaus Innovationen in unserem Ansatz zur digitalen Barrierefreiheit.",
+    jp: "デジタルアクセシビリティは、ブラジルではイニシアティブ以上のものであり、法律として定められています。2004年の法令第5,296号およびブラジルの包括法第13,146号によれば、インターネット上で提供されるすべての情報とコミュニケーションサービスは、障害を持つ人々に対して完全にアクセス可能でなければなりません。この法律は、能力に関係なく、すべての人がデジタル社会に完全に参加できるようにするために重要です。パパイヤプロジェクトは、この法律と調和しており、デジタルアクセシビリティに取り組む方法を革新しようとしています。",
   },
   openData: {
     pt: "Dados abertos para todos",
@@ -152,6 +173,7 @@ export const messages = {
     es: "Datos abiertos para todos",
     fr: "Données ouvertes pour tous",
     de: "Offene Daten für alle",
+    jp: "オープンデータは誰にでも開かれています",
   },
   openDataDescription: {
     pt: "Acreditamos na transparência e na colaboração. Por isso, qualquer pessoa pode baixar o conjunto de dados que estamos reunindo. Oferecemos duas opções: a primeira é usar marcos de estimativa de pose, que anonimizam os indivíduos nos vídeos. A segunda opção é baixar os vídeos coletados, mas, para isso, é necessário assinar um termo de confidencialidade para proteger os dados pessoais dos vídeos. Além disso, se uma pessoa solicitar que seus dados sejam excluídos, quem baixou o conjunto de dados será responsável por excluí-los também. Essa comunicação será feita pela nossa plataforma.",
@@ -159,6 +181,7 @@ export const messages = {
     es: "Creemos en la transparencia y la colaboración. Por eso, cualquier persona puede descargar el conjunto de datos que estamos recopilando. Ofrecemos dos opciones: la primera es usar puntos de referencia de estimación de poses, que anonimizan a los individuos en los videos. La segunda opción es descargar los videos recopilados, pero esto requiere firmar un acuerdo de confidencialidad para proteger los datos personales en los videos. Además, si una persona solicita que se eliminen sus datos, quien haya descargado el conjunto de datos también será responsable de eliminarlos. Esta comunicación se hará a través de nuestra plataforma.",
     fr: "Nous croyons en la transparence et la collaboration. C'est pourquoi tout le monde peut télécharger le jeu de données que nous sommes en train de compiler. Nous proposons deux options : la première consiste à utiliser des points de repère d'estimation de pose, qui anonymisent les individus dans les vidéos. La deuxième option consiste à télécharger les vidéos collectées, mais cela nécessite de signer un accord de confidentialité pour protéger les données personnelles dans les vidéos. De plus, si une personne demande à ce que ses données soient supprimées, celui qui a téléchargé le jeu de données sera également responsable de leur suppression. Cette communication sera effectuée par notre plateforme.",
     de: "Wir glauben an Transparenz und Zusammenarbeit. Deshalb kann jeder den Datensatz herunterladen, den wir gerade erstellen. Wir bieten zwei Optionen an: Die erste besteht darin, Pose-Estimation-Landmarks zu verwenden, die Personen in den Videos anonymisieren. Die zweite Möglichkeit besteht darin, die gesammelten Videos herunterzuladen, aber dafür ist die Unterzeichnung einer Vertraulichkeitsvereinbarung erforderlich, um die persönlichen Daten in den Videos zu schützen. Darüber hinaus, wenn eine Person die Löschung ihrer Daten anfordert, ist die Person, die den Datensatz heruntergeladen hat, ebenfalls für deren Löschung verantwortlich. Diese Kommunikation wird über unsere Plattform erfolgen.",
+    jp: "私たちは透明性と協力を信じています。そのため、誰でも私たちが収集しているデータセットをダウンロードすることができます。2つのオプションを提供しています。1つ目はポーズの推定ランドマークを使用する方法で、ビデオ内の個人を匿名化します。2つ目のオプションは、収集したビデオをダウンロードすることですが、その際にはビデオ内の個人データを保護するために機密保持契約に署名する必要があります。さらに、個人がデータの削除を要求した場合、データセットをダウンロードした人物もそれらのデータを削除する責任があります。このやり取りは、当社のプラットフォームを通じて行われます。",
   },
   translationModel: {
     pt: "Contribua com seu modelo de tradução",
@@ -166,6 +189,7 @@ export const messages = {
     es: "Contribuya con su Modelo de Traducción",
     fr: "Contribuez avec votre modèle de traduction",
     de: "Beitragen mit Ihrem Übersetzungsmodell",
+    jp: "翻訳モデルを提供してください",
   },
   translationModelDescription: {
     pt: "O software do nosso tradutor também é de código aberto. Isso significa que qualquer pessoa pode contribuir com seus próprios modelos de tradução. Para garantir a melhor performance, realizaremos uma avaliação de desempenho regularmente. O modelo que tiver o melhor desempenho será automaticamente utilizado na plataforma do tradutor de demonstração. Esta é a sua chance de contribuir para o desenvolvimento da acessibilidade digital!",
@@ -173,5 +197,6 @@ export const messages = {
     es: "El software de nuestro traductor también es de código abierto. Esto significa que cualquier persona puede contribuir con sus propios modelos de traducción. Para garantizar el máximo rendimiento, realizaremos una revisión de rendimiento regular. El modelo que mejor rendimiento tenga será utilizado automáticamente en la plataforma del traductor de demostración. ¡Esta es su oportunidad de contribuir al desarrollo de la accesibilidad digital!",
     fr: "Notre logiciel de traduction est également open source. Cela signifie que n'importe qui peut contribuer avec ses propres modèles de traduction. Pour assurer une performance optimale, nous effectuerons une revue de performance régulière. Le modèle qui performe le mieux sera automatiquement utilisé sur la plateforme de démonstration du traducteur. C'est votre chance de contribuer au développement de l'accessibilité numérique !",
     de: "Unsere Übersetzungssoftware ist ebenfalls Open Source. Das bedeutet, dass jeder mit seinen eigenen Übersetzungsmodellen beitragen kann. Um eine hohe Leistung zu gewährleisten, führen wir regelmäßig eine Leistungsbewertung durch. Das Modell, das am besten abschneidet, wird automatisch auf der Demonstrationsplattform des Übersetzers verwendet. Dies ist Ihre Chance, zur Entwicklung der digitalen Barrierefreiheit beizutragen!",
+    jp: "私たちの翻訳ソフトウェアもオープンソースです。つまり、誰でも独自の翻訳モデルを提供することができます。最高のパフォーマンスを確保するために、定期的なパフォーマンスレビューを行います。最も優れたパフォーマンスを発揮するモデルは、デモンストレーション翻訳プラットフォームで自動的に使用されます。これは、デジタルアクセシビリティの開発に貢献する機会です！",
   },
 };
