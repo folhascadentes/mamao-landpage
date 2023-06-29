@@ -1,6 +1,6 @@
 import "./App.css";
-import database3d from "./assets/database3d.jpeg";
-import law3d from "./assets/law3d.jpeg";
+import worldDatabase from "./assets/worldDatabase.png";
+import scale from "./assets/scale.png";
 import papaya3d from "./assets/papaya3d.jpeg";
 import person3dPt from "./assets/person3d_pt.jpeg";
 import person3dEn from "./assets/person3d_en.jpeg";
@@ -8,7 +8,7 @@ import person3dEs from "./assets/person3d_es.jpeg";
 import person3dFr from "./assets/person3d_fr.jpeg";
 import person3dDe from "./assets/person3d_de.jpeg";
 import person3dJp from "./assets/person3d_jp.jpeg";
-import shooting3d from "./assets/shooting3d.jpeg";
+import world from "./assets/world.png";
 import React, { useEffect, useState, useRef } from "react";
 import { messages } from "./i18n.js";
 import { HotKeys } from "react-hotkeys";
@@ -294,7 +294,7 @@ function App() {
               <div className="flex justify-center mr-10">
                 <img
                   src={personMapper[language]}
-                  style={{ height: "450px" }}
+                  style={{ height: "500px" }}
                   alt=""
                 />
               </div>
@@ -357,8 +357,8 @@ function App() {
               ></div>
             </div>
             <div className="md:w-1/2">
-              <div className="justify-center hidden md:flex">
-                <img src={shooting3d} style={{ height: "400px" }} alt="" />
+              <div className="justify-center hidden md:flex mt-16">
+                <img src={world} style={{ height: "560px" }} alt="" />
               </div>
             </div>
           </section>
@@ -377,7 +377,7 @@ function App() {
           >
             <div className="md:w-1/2 hidden md:block">
               <div className="flex justify-center">
-                <img src={law3d} style={{ height: "325px" }} alt="" />
+                <img src={scale} style={{ height: "360px" }} alt="" />
               </div>
             </div>
             <div className="md:w-1/2">
@@ -422,7 +422,7 @@ function App() {
             </div>
             <div className="md:w-1/2 hidden md:block">
               <div className="flex justify-center mt-20">
-                <img src={database3d} style={{ height: "400px" }} alt="" />
+                <img src={worldDatabase} style={{ height: "460px" }} alt="" />
               </div>
             </div>
           </section>
