@@ -1,4 +1,17 @@
 import "./App.css";
+import React, { useEffect, useState, useRef } from "react";
+import {
+  IconButton,
+  useDisclosure,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerCloseButton,
+} from "@chakra-ui/react";
+import AccessibilityMenu from "./components/AccessibilityMenu.js";
+import { messages } from "./i18n.js";
+import { HotKeys } from "react-hotkeys";
+import { MdMenu } from "react-icons/md";
 import worldDatabase from "./assets/worldDatabase.png";
 import scale from "./assets/scale.png";
 import papaya3d from "./assets/papaya3d.jpeg";
@@ -9,13 +22,10 @@ import person3dFr from "./assets/person3d_fr.jpeg";
 import person3dDe from "./assets/person3d_de.jpeg";
 import person3dJp from "./assets/person3d_jp.jpeg";
 import world from "./assets/world.png";
-import React, { useEffect, useState, useRef } from "react";
-import { messages } from "./i18n.js";
-import { HotKeys } from "react-hotkeys";
-import { MdContrast, MdKeyboardArrowDown } from "react-icons/md";
-import { Button, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 
 function App() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const focusRef = useRef(null);
   const section0Ref = useRef(null);
   const section1Ref = useRef(null);
@@ -25,6 +35,7 @@ function App() {
   const section5Ref = useRef(null);
   const section6Ref = useRef(null);
   const section7Ref = useRef(null);
+
   const [fontSize, setFontSize] = useState(
     localStorage.getItem("fontSize")
       ? Number(localStorage.getItem("fontSize"))
@@ -48,8 +59,6 @@ function App() {
   const [language, setLanguage] = useState(
     localStorage.getItem("language") ? localStorage.getItem("language") : "pt"
   );
-
-  const languages = ["pt", "en", "es", "fr", "de", "jp"];
 
   const personMapper = {
     pt: person3dPt,
@@ -164,7 +173,7 @@ function App() {
         <style>{`html {font-size: ${fontSize}%; color: ${textColor}; background-color: ${backgroundColor}; }`}</style>
         <header>
           <nav className="container mx-auto px-6 py-8">
-            <div className="flex flex-wrap space-y-6 justify-between items-center">
+            <div className="flex space-y-6 justify-between items-center">
               <div className="flex items-center space-x-4">
                 <img
                   src={papaya3d}
@@ -176,77 +185,49 @@ function App() {
                   MAMÃO
                 </p>
               </div>
-              <div className="flex space-x-1 md:space-x-4">
-                <button
-                  onClick={handleGoToApp}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white py-6 px-8 rounded-xl text-2xl hidden md:inline"
-                >
-                  {messages.ctaButton1[language]}{" "}
-                  <span className="text-base hidden md:inline">[A]</span>
-                </button>
-                <button
-                  title="Autocontraste"
-                  aria-describedby="Autocontraste"
-                  className={`hover:bg-gray-${buttonHoverColorWeight} rounded-xl px-4`}
-                  onClick={handleHightConstast}
-                  style={{ fontSize: "24px" }}
-                >
-                  <div className="flex space-x-2">
-                    <MdContrast size={32} />{" "}
-                    <span className="text-sm hidden md:inline">[C]</span>
-                  </div>
-                </button>
-                <button
-                  title="Ação de aumentar tamanho do texto [Ctrl+]"
-                  aria-describedby="Ação de aumentar tamanho do texto"
-                  className={`hover:bg-gray-${buttonHoverColorWeight} rounded-xl px-4`}
-                  onClick={handleIncreaseFontSize}
-                  style={{ fontSize: "24px" }}
-                >
-                  A+
-                </button>
-                <button
-                  title="Ação de aumentar diminuir do texto [Ctrl-]"
-                  aria-describedby="Ação de aumentar diminuir do texto"
-                  className={`hover:bg-gray-${buttonHoverColorWeight} rounded-xl px-4 `}
-                  onClick={handleDecreaseFontSize}
-                  style={{ fontSize: "24px" }}
-                >
-                  A-
-                </button>
-                <div className="flex items-center pl-2.5 md:pl-4">
-                  <Menu>
-                    <MenuButton
-                      as={Button}
-                      rightIcon={<MdKeyboardArrowDown />}
-                      style={{ fontSize: "24px" }}
-                    >
-                      {language.toLocaleUpperCase()}
-                    </MenuButton>
-                    <MenuList
-                      minWidth="80px"
-                      style={{
-                        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
-                        padding: "12px 16px",
-                        borderRadius: "1rem",
-                        fontSize: "24px",
-                      }}
-                      bg="gray-500"
-                    >
-                      {languages.map((language) => (
-                        <MenuItem
-                          my={4}
-                          onClick={() => handleChangeLanguage(language)}
-                        >
-                          {language.toUpperCase()}
-                        </MenuItem>
-                      ))}
-                    </MenuList>
-                  </Menu>
-                </div>
+              <div className="flex md:hidden pb-6">
+                <IconButton
+                  aria-label="Open menu"
+                  icon={<MdMenu size={32} />}
+                  variant="outline"
+                  onClick={onOpen}
+                />
+              </div>
+              <div className="hidden md:flex">
+                <AccessibilityMenu
+                  handleGoToApp={handleGoToApp}
+                  handleHightConstast={handleHightConstast}
+                  handleIncreaseFontSize={handleIncreaseFontSize}
+                  handleDecreaseFontSize={handleDecreaseFontSize}
+                  handleChangeLanguage={handleChangeLanguage}
+                  language={language}
+                  messages={messages}
+                  backgroundColor={backgroundColor}
+                  buttonHoverColorWeight={buttonHoverColorWeight}
+                />
               </div>
             </div>
           </nav>
+
+          <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+            <DrawerContent className="p-6" style={{ backgroundColor }}>
+              <DrawerBody>
+                <DrawerCloseButton className="text-right" />
+                <AccessibilityMenu
+                  handleGoToApp={handleGoToApp}
+                  handleHightConstast={handleHightConstast}
+                  handleIncreaseFontSize={handleIncreaseFontSize}
+                  handleDecreaseFontSize={handleDecreaseFontSize}
+                  handleChangeLanguage={handleChangeLanguage}
+                  language={language}
+                  messages={messages}
+                  backgroundColor={backgroundColor}
+                  buttonHoverColorWeight={buttonHoverColorWeight}
+                />
+              </DrawerBody>
+            </DrawerContent>
+          </Drawer>
+
           <div className="container mx-auto px-6 pt-16 md:pt-24 pb-16">
             <div className="flex flex-col md:flex-row space-x-10">
               <div ref={section0Ref} className="md:w-2/3">
