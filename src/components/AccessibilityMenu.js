@@ -16,7 +16,7 @@ function AccessibilityMenu({
   const languages = ["pt", "en", "es", "fr", "de", "jp"];
 
   return (
-    <div className="flex space-x-4 items-center pl-2.5 md:pl-4">
+    <div className="flex flex-col md:flex-row md:space-x-4 md:space-y-0 space-y-4 items-center">
       <button
         onClick={handleGoToApp}
         className="bg-indigo-600 hover:bg-indigo-700 text-white py-6 px-8 rounded-xl text-2xl hidden md:inline"

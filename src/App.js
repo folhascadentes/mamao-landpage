@@ -7,6 +7,7 @@ import {
   DrawerBody,
   DrawerContent,
   DrawerCloseButton,
+  Flex,
 } from "@chakra-ui/react";
 import AccessibilityMenu from "./components/AccessibilityMenu.js";
 import { messages } from "./i18n.js";
@@ -209,10 +210,18 @@ function App() {
             </div>
           </nav>
 
-          <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
-            <DrawerContent className="p-6" style={{ backgroundColor }}>
+          <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
+            <DrawerContent
+              className="p-6"
+              style={{
+                backgroundColor,
+                boxShadow: "rgba(0, 0, 0, 0.45) 0px 25px 20px -20px",
+              }}
+            >
               <DrawerBody>
-                <DrawerCloseButton className="text-right" />
+                <Flex justifyContent="flex-end">
+                  <DrawerCloseButton />
+                </Flex>
                 <AccessibilityMenu
                   handleGoToApp={handleGoToApp}
                   handleHightConstast={handleHightConstast}
