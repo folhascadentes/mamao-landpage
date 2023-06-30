@@ -58,7 +58,7 @@ function AccessibilityMenu({
         <MenuButton
           as={Button}
           rightIcon={<MdKeyboardArrowDown />}
-          style={{ fontSize: "24px" }}
+          style={{ fontSize: "24px", marginLeft: "24px" }}
         >
           {language.toLocaleUpperCase()}
         </MenuButton>

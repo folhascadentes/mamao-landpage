@@ -7,6 +7,7 @@ import {
   DrawerBody,
   DrawerContent,
   DrawerCloseButton,
+  DrawerOverlay,
   Flex,
 } from "@chakra-ui/react";
 import AccessibilityMenu from "./components/AccessibilityMenu.js";
@@ -211,33 +212,35 @@ function App() {
           </nav>
 
           <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
-            <DrawerContent
-              className="p-6"
-              style={{
-                backgroundColor,
-                boxShadow: "rgba(0, 0, 0, 0.45) 0px 25px 20px -20px",
-              }}
-            >
-              <DrawerBody>
-                <Flex justifyContent="flex-end">
-                  <DrawerCloseButton />
-                </Flex>
-                <AccessibilityMenu
-                  handleGoToApp={handleGoToApp}
-                  handleHightConstast={handleHightConstast}
-                  handleIncreaseFontSize={handleIncreaseFontSize}
-                  handleDecreaseFontSize={handleDecreaseFontSize}
-                  handleChangeLanguage={handleChangeLanguage}
-                  language={language}
-                  messages={messages}
-                  backgroundColor={backgroundColor}
-                  buttonHoverColorWeight={buttonHoverColorWeight}
-                />
-              </DrawerBody>
-            </DrawerContent>
+            <DrawerOverlay>
+              <DrawerContent
+                className="p-6"
+                style={{
+                  backgroundColor,
+                  boxShadow: "rgba(0, 0, 0, 0.45) 0px 25px 20px -20px",
+                }}
+              >
+                <DrawerBody>
+                  <Flex justifyContent="flex-end">
+                    <DrawerCloseButton />
+                  </Flex>
+                  <AccessibilityMenu
+                    handleGoToApp={handleGoToApp}
+                    handleHightConstast={handleHightConstast}
+                    handleIncreaseFontSize={handleIncreaseFontSize}
+                    handleDecreaseFontSize={handleDecreaseFontSize}
+                    handleChangeLanguage={handleChangeLanguage}
+                    language={language}
+                    messages={messages}
+                    backgroundColor={backgroundColor}
+                    buttonHoverColorWeight={buttonHoverColorWeight}
+                  />
+                </DrawerBody>
+              </DrawerContent>
+            </DrawerOverlay>
           </Drawer>
 
-          <div className="container mx-auto px-6 pt-16 md:pt-24 pb-16">
+          <div className="container mx-auto px-6 pt-8 md:pt-24 md:pb-16">
             <div className="flex flex-col md:flex-row space-x-10">
               <div ref={section0Ref} className="md:w-2/3">
                 <h1 className="text-5xl md:text-7xl xl:text-8xl">
@@ -280,11 +283,13 @@ function App() {
             ref={section2Ref}
             className="flex flex-col md:flex-row pb-16 md:pl-6 flex justify-end"
           >
-            <div className="md:w-1/2 hidden md:block">
+            <div className="md:w-1/2 md:block py-6 md:py-0">
               <div className="flex justify-center mr-10">
                 <img
                   src={personMapper[language]}
-                  style={{ height: "500px" }}
+                  style={{
+                    height: window.innerWidth <= 500 ? "300px" : "500px",
+                  }}
                   alt=""
                 />
               </div>
@@ -317,8 +322,8 @@ function App() {
               <span className="text-base hidden md:inline">[A]</span>
             </button>
           </div>
-          <section className="py-16 md:pr-6 flex">
-            <div className="md:w-1/2">
+          <section className="block md:flex py-16 md:pr-6">
+            <div className="w-100 md:w-1/2">
               <h2
                 ref={section3Ref}
                 className="text-3xl md:text-4xl xl:text-5xl"
@@ -346,9 +351,15 @@ function App() {
                 }}
               ></div>
             </div>
-            <div className="md:w-1/2">
-              <div className="justify-center hidden md:flex mt-16">
-                <img src={world} style={{ height: "560px" }} alt="" />
+            <div className="w-100 md:w-1/2 md:block">
+              <div className="flex justify-center mt-16">
+                <img
+                  src={world}
+                  style={{
+                    height: window.innerWidth <= 500 ? "300px" : "560px",
+                  }}
+                  alt=""
+                />
               </div>
             </div>
           </section>
@@ -410,9 +421,15 @@ function App() {
                 }}
               ></div>
             </div>
-            <div className="md:w-1/2 hidden md:block">
-              <div className="flex justify-center mt-20">
-                <img src={worldDatabase} style={{ height: "460px" }} alt="" />
+            <div className="md:w-1/2 md:block">
+              <div className="flex justify-center mt-8 md:mt-20">
+                <img
+                  src={worldDatabase}
+                  style={{
+                    height: window.innerWidth <= 500 ? "300px" : "460px",
+                  }}
+                  alt=""
+                />
               </div>
             </div>
           </section>
