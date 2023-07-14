@@ -211,7 +211,7 @@ function App() {
             </div>
           </nav>
 
-          <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
+          <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
             <DrawerOverlay>
               <DrawerContent
                 className="p-6"
